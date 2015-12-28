@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--🔍-->
         <scene sceneID="nEm-PY-riR">
             <objects>
                 <tableViewController id="7Ey-Bb-dAu" customClass="SearchTableViewController" customModule="Emoji_Search" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="7Ey-Bb-dAu" id="xpy-w0-QiR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="v0K-JA-HjC"/>
+                    <navigationItem key="navigationItem" title="🔍" id="v0K-JA-HjC" userLabel="🔍"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkH-HK-CLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
