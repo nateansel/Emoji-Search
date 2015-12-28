@@ -14,6 +14,7 @@
 		D87EEDE11C31C7BC0011D8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87EEDDF1C31C7BC0011D8A5 /* LaunchScreen.storyboard */; };
 		D87EEDEC1C31C7BC0011D8A5 /* Emoji_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDEB1C31C7BC0011D8A5 /* Emoji_SearchTests.swift */; };
 		D87EEDF71C31C7BC0011D8A5 /* Emoji_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDF61C31C7BC0011D8A5 /* Emoji_SearchUITests.swift */; };
+		D87EEE051C31CA470011D8A5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D87EEDF21C31C7BC0011D8A5 /* Emoji SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Emoji SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87EEDF61C31C7BC0011D8A5 /* Emoji_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji_SearchUITests.swift; sourceTree = "<group>"; };
 		D87EEDF81C31C7BC0011D8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */,
 				D87EEDD81C31C7BC0011D8A5 /* ViewController.swift */,
+				D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */,
 				D87EEDDA1C31C7BC0011D8A5 /* Main.storyboard */,
 				D87EEDDD1C31C7BC0011D8A5 /* Assets.xcassets */,
 				D87EEDDF1C31C7BC0011D8A5 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87EEDD91C31C7BC0011D8A5 /* ViewController.swift in Sources */,
+				D87EEE051C31CA470011D8A5 /* SearchTableViewController.swift in Sources */,
 				D87EEDD71C31C7BC0011D8A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
