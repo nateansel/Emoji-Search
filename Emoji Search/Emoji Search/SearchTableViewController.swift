@@ -15,7 +15,7 @@ class SearchTableViewController: UITableViewController {
   var filteredEmoji = NSMutableArray()
   var unfilteredEmoji = NSMutableArray()
   let searchController = UISearchController(searchResultsController: nil)
-  var emojiDictionary = NSMutableDictionary()
+//  var emojiDictionary = NSMutableDictionary()
   
   
   
@@ -26,9 +26,13 @@ class SearchTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    emojazz.setObject(["🤓","📠"], forKey: "nerdbutt")
-    emojazz.setObject(["🤑"], forKey: "moneyface")
-    emojazz.setObject(["🤗"], forKey: "nohands")
+//    emojazz.setObject(["🤓","📠"], forKey: "nerdbutt")
+//    emojazz.setObject(["🤑"], forKey: "moneyface")
+//    emojazz.setObject(["🤗"], forKey: "nohands")
+    
+    let parser = EmojiParser()
+    emojazz = parser.parseEmoji()
+    
     
     for key in emojazz.allKeys {
       for emoji in emojazz[key as! String] as! NSArray {
@@ -43,9 +47,6 @@ class SearchTableViewController: UITableViewController {
     searchController.dimsBackgroundDuringPresentation = false
     
     tableView.tableHeaderView = searchController.searchBar
-    
-    let parser = EmojiParser();
-    emojiDictionary = parser.parseEmoji()
   }
   
   
