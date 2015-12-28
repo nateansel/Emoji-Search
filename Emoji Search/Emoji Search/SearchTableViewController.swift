@@ -13,15 +13,28 @@ class SearchTableViewController: UITableViewController {
   // MARK: - Properties
   var emojazz = NSMutableDictionary()
   var filteredEmoji = NSMutableArray()
+  var unfilteredEmoji = NSMutableArray()
   let searchController = UISearchController(searchResultsController: nil)
   var emojiDictionary = NSMutableDictionary()
   
+  
+  
+  
+  // MARK: - Methods
+  
+  // MARK: Overrides
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    emojazz.setObject("🤓", forKey: "nerdbutt")
-    emojazz.setObject("🤑", forKey: "moneyface")
-    emojazz.setObject("🤗", forKey: "nohands")
+    emojazz.setObject(["🤓","📠"], forKey: "nerdbutt")
+    emojazz.setObject(["🤑"], forKey: "moneyface")
+    emojazz.setObject(["🤗"], forKey: "nohands")
+    
+    for key in emojazz.allKeys {
+      for emoji in emojazz[key as! String] as! NSArray {
+        unfilteredEmoji.addObject(emoji)
+      }
+    }
     
     // Setup the Search Controller
     searchController.searchResultsUpdater = self
@@ -35,24 +48,35 @@ class SearchTableViewController: UITableViewController {
     emojiDictionary = parser.parseEmoji()
   }
   
+  
+  
+  
+  
   // MARK: - Table View
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
   
+  
+  
+  
+  
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if searchController.searchBar.text! == "" {
-      return emojazz.count
+      return unfilteredEmoji.count
     }
     return filteredEmoji.count
   }
+  
+  
+  
+  
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
     
     if searchController.searchBar.text! == "" {
-      let emojazzNumbers = emojazz.allKeys
-      let emoji = emojazz[emojazzNumbers[indexPath.row] as! String] as! String
+      let emoji = unfilteredEmoji[indexPath.row] as! String
       cell.textLabel!.text = emoji
     }
     else {
@@ -63,16 +87,42 @@ class SearchTableViewController: UITableViewController {
   }
   
   
+  
+  
+  
+  override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    let cell = tableView.cellForRowAtIndexPath(indexPath)
+    UIPasteboard.generalPasteboard().string = cell?.textLabel!.text
+    cell?.textLabel!.text = (cell?.textLabel!.text!)! + " - copied!"
+    return indexPath
+  }
+  
+  
+  
+  
+  
   func filterContentForSearchText(searchText: String) {
     filteredEmoji.removeAllObjects()
-    for key in emojazz.allKeys {
-      if key.lowercaseString.containsString(searchText.lowercaseString) {
-        filteredEmoji.addObject(emojazz[key as! String] as! String)
+    for word in searchText.componentsSeparatedByString(" ") {
+      for key in emojazz.allKeys {
+        if key.lowercaseString.containsString(word.lowercaseString) {
+          for emoji in emojazz[key as! String] as! NSArray {
+            if filteredEmoji.indexOfObject(emoji) == NSNotFound {
+              filteredEmoji.addObject(emoji)
+            }
+          }
+        }
       }
     }
     tableView.reloadData()
   }
 }
+
+
+
+
+
+
 
 
 extension SearchTableViewController: UISearchBarDelegate {
