@@ -46,6 +46,12 @@ class SearchTableViewController: UITableViewController {
   
   
   
+  override func viewWillAppear(animated: Bool) {
+    searchController.searchBar.becomeFirstResponder()
+  }
+  
+  
+  
   
   
   // MARK: - Table View
