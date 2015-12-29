@@ -120,8 +120,22 @@ class SearchTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
     let cell = tableView.cellForRowAtIndexPath(indexPath)
     UIPasteboard.generalPasteboard().string = cell?.textLabel!.text
-    cell?.textLabel!.text = (cell?.textLabel!.text!)! + " - copied!"
+    
+    let hud = MBProgressHUD.showHUDAddedTo(navigationController?.view, animated: true)
+    hud.mode = MBProgressHUDMode.Text
+    hud.labelText = (cell?.textLabel!.text)! + "➡️📋"
+    hud.detailsLabelText = "Copied!"
+    hud.margin = 20.0
+    hud.removeFromSuperViewOnHide = true
+    hud.hide(true, afterDelay: 1)
+    
     return indexPath
+  }
+  
+  
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
   
   
@@ -130,9 +144,9 @@ class SearchTableViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     if searchController.searchBar.text! == "" {
-      return emojiCatagories[section] as! String
+      return emojiCatagories[section] as? String
     }
-    return filteredCatagories[section] as! String
+    return filteredCatagories[section] as? String
   }
   
   

@@ -6,6 +6,8 @@
 //  Copyright © 2015 Nathan Ansel. All rights reserved.
 //
 
+// Emoji JSON taken from: https://github.com/muan/emojilib
+
 import UIKit
 
 class EmojiParser {
@@ -88,10 +90,12 @@ class EmojiParser {
     
     for (name, value) in JSON {
       let tempValue = value as! NSDictionary
+      let emojiName = (name as! String).stringByReplacingOccurrencesOfString("_", withString: " ")
+      let category = (tempValue.objectForKey("category") as! String).stringByReplacingOccurrencesOfString("_", withString: " ")
       emojiObjects.addObject(
-        Emoji(name: name as! String,
+        Emoji(name: emojiName.capitalizedString,
           symbol: tempValue.objectForKey("char") as! String,
-          catagory: tempValue.objectForKey("category") as! String,
+          catagory: category.capitalizedString,
           keywords: tempValue.objectForKey("keywords") as! NSArray
         )
       )
