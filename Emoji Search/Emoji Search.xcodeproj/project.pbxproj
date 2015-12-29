@@ -19,6 +19,10 @@
 		D87EEDEC1C31C7BC0011D8A5 /* Emoji_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDEB1C31C7BC0011D8A5 /* Emoji_SearchTests.swift */; };
 		D87EEDF71C31C7BC0011D8A5 /* Emoji_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDF61C31C7BC0011D8A5 /* Emoji_SearchUITests.swift */; };
 		D87EEE051C31CA470011D8A5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */; };
+		D89EFFE11C33344F008E3CA4 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */; };
+		D89EFFE21C33345B008E3CA4 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861E1841C322B9B003ED5A7 /* Emoji.swift */; };
+		D89EFFE31C33345F008E3CA4 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3644811C31E62D0094E704 /* emojis.json */; };
+		D89EFFE41C3334FB008E3CA4 /* EmojiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3644831C31E6430094E704 /* EmojiParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89EFFE31C33345F008E3CA4 /* emojis.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89EFFE21C33345B008E3CA4 /* Emoji.swift in Sources */,
+				D89EFFE41C3334FB008E3CA4 /* EmojiParser.swift in Sources */,
 				D87EEDEC1C31C7BC0011D8A5 /* Emoji_SearchTests.swift in Sources */,
+				D89EFFE11C33344F008E3CA4 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

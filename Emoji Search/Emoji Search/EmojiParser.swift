@@ -107,4 +107,12 @@ class EmojiParser {
     
     return emojiObjects
   }
+  
+  
+  
+  
+  
+  func parseEmojiObjectsToJSON(emojiObjects: NSArray) {
+    
+  }
 }
