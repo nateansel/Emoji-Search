@@ -63,7 +63,12 @@ class EmojiParser {
   
   
   
-  
+  ///
+  ///  Parses the JSON file to an array of Emoji objects.
+  ///
+  /// - author: Nathan Ansel
+  /// - returns: An array of Emoji objects
+  ///
   func parseEmojiToObjects() -> NSMutableArray {
     let filePath = NSBundle.mainBundle().pathForResource("emojis", ofType: "json")
     var fileString = NSString();
@@ -83,9 +88,6 @@ class EmojiParser {
       print("FAILURE")
     }
     
-//    let keywords = NSMutableArray()
-//    let emojis = NSMutableDictionary()
-    
     let emojiObjects = NSMutableArray()
     
     for (name, value) in JSON {
@@ -101,44 +103,8 @@ class EmojiParser {
       )
     }
     
-    print("parse complete")
-    for item in emojiObjects {
-      print((item as! Emoji).name, (item as! Emoji).symbol)
-    }
-//    print(emojiObjects)
+    print("Parsing JSON to Emoji objects complete.")
     
     return emojiObjects
-    
-    
-    
-    
-    
-    
-    
-//    for (_, value) in JSON {
-//      let tempKeywords = (value as! NSDictionary).objectForKey("keywords") as! NSArray
-//      for keyword in tempKeywords {
-//        if !keywords.containsObject(keyword) {
-//          keywords.addObject(keyword)
-//        }
-//      }
-//    }
-//    
-//    for (_, value) in JSON {
-//      let tempKeywords = (value as! NSDictionary).objectForKey("keywords") as! NSArray
-//      for keyword in tempKeywords {
-//        let chars = NSMutableArray();
-//        emojis.setObject(chars, forKey: keyword as! String)
-//      }
-//    }
-//    
-//    for (_, value) in JSON {
-//      let tempKeywords = (value as! NSDictionary).objectForKey("keywords") as! NSArray
-//      for keyword in tempKeywords {
-//        emojis.objectForKey(keyword as! NSString)?.addObject(value.objectForKey("char")!)
-//      }
-//    }
-    
-//    return emojis
   }
 }

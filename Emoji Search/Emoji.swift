@@ -8,6 +8,11 @@
 
 import Foundation
 
+
+/// 
+/// An object used to store emoji and their searchable data
+///
+/// - author Nathan Ansel
 class Emoji {
   var name     = ""
   var symbol   = ""
@@ -19,9 +24,5 @@ class Emoji {
     self.symbol   = symbol
     self.catagory = catagory
     self.keywords = keywords
-  }
-  
-  func compare(otherObject: Emoji) -> NSComparisonResult {
-    return name.compare(otherObject.name)
   }
 }
