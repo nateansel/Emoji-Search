@@ -39,10 +39,12 @@ class SearchTableViewController: UITableViewController {
       }
     }
     
+    // Sort the emoji objects by name
     emojiObjects.sortUsingComparator({ (firstObject: AnyObject, secondObject: AnyObject) -> NSComparisonResult in
       (firstObject as! Emoji).name.compare((secondObject as! Emoji).name)
     })
     
+    // Sort the emoji objects into catagories
     for item in emojiObjects {
       sortedEmojiObjects[emojiCatagories.indexOfObject((item as! Emoji).catagory)].addObject((item as! Emoji))
     }
@@ -83,12 +85,6 @@ class SearchTableViewController: UITableViewController {
       return sortedEmojiObjects[section].count
     }
     return filteredEmoji[section].count
-    
-    
-//    if searchController.searchBar.text! == "" {
-//      return emojiObjects.count
-//    }
-//    return filteredEmoji.count
   }
   
   
@@ -100,13 +96,11 @@ class SearchTableViewController: UITableViewController {
     
     if searchController.searchBar.text! == "" {
       let emoji = sortedEmojiObjects[indexPath.section][indexPath.row] as! Emoji
-//      let emoji = emojiObjects[indexPath.row] as! Emoji
       cell.textLabel!.text = emoji.symbol
       cell.detailTextLabel!.text = emoji.name
     }
     else {
       let emoji = filteredEmoji[indexPath.section][indexPath.row] as! Emoji
-//      let emoji = filteredEmoji[indexPath.row] as! Emoji
       cell.textLabel!.text = emoji.symbol
       cell.detailTextLabel!.text = emoji.name
     }
@@ -130,35 +124,24 @@ class SearchTableViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     if searchController.searchBar.text! == "" {
-      return emojiCatagories[section] as! String
+      return emojiCatagories[section] as? String
     }
-    return filteredCatagories[section] as! String
+    return filteredCatagories[section] as? String
   }
   
   
   
   
+  
+  ///
+  ///  Search the list of Emoji objects for anything matching the search string
+  ///  and put it in the filteredEmoji list for display purposes.
+  ///
+  /// - author: Nathan Ansel
+  /// - parameter searchText: The search string to be used when searching the
+  ///                         emoji objects.
+  ///
   func filterContentForSearchText(searchText: String) {
-    filteredEmoji.removeAllObjects()
-    for key in emojazz.allKeys {
-      for word in searchText.componentsSeparatedByString(" ") {
-        if key.lowercaseString.containsString(word.lowercaseString) {
-          for emoji in emojazz[key as! String] as! NSArray {
-            if filteredEmoji.indexOfObject(emoji) == NSNotFound {
-              filteredEmoji.addObject(emoji)
-            }
-          }
-        }
-      }
-    }
-    tableView.reloadData()
-  }
-  
-  
-  
-  
-  
-  func filterContentForSearchText2(searchText: String) {
     // Clear out the old search
     filteredEmoji.removeAllObjects()
     filteredCatagories.removeAllObjects()
@@ -176,7 +159,7 @@ class SearchTableViewController: UITableViewController {
             addEmoji = true
           }
         }
-        if addEmoji
+        if !addEmoji
           && (emojiObject.name.lowercaseString.containsString(word.lowercaseString)
               || emojiObject.symbol.containsString(word)) {
           addEmoji = true
@@ -214,13 +197,13 @@ class SearchTableViewController: UITableViewController {
 extension SearchTableViewController: UISearchBarDelegate {
   // MARK: - UISearchBar Delegate
   func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-    filterContentForSearchText2(searchBar.text!)
+    filterContentForSearchText(searchBar.text!)
   }
 }
 
 extension SearchTableViewController: UISearchResultsUpdating {
   // MARK: - UISearchResultsUpdating Delegate
   func updateSearchResultsForSearchController(searchController: UISearchController) {
-    filterContentForSearchText2(searchController.searchBar.text!)
+    filterContentForSearchText(searchController.searchBar.text!)
   }
 }
