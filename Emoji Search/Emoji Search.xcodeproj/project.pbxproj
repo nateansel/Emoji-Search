@@ -10,6 +10,8 @@
 		2E3644821C31E62D0094E704 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3644811C31E62D0094E704 /* emojis.json */; };
 		2E3644841C31E6430094E704 /* EmojiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3644831C31E6430094E704 /* EmojiParser.swift */; };
 		2E3C0D6F1C332BB2003C5921 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C0D6E1C332BB2003C5921 /* MBProgressHUD.m */; };
+		2E3C0D711C3357B9003C5921 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C0D701C3357B9003C5921 /* CustomSearchBar.swift */; };
+		2E3C0D731C33595A003C5921 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C0D721C33595A003C5921 /* CustomSearchController.swift */; };
 		D861E1851C322B9B003ED5A7 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861E1841C322B9B003ED5A7 /* Emoji.swift */; };
 		D87EEDD71C31C7BC0011D8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */; };
 		D87EEDD91C31C7BC0011D8A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDD81C31C7BC0011D8A5 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		2E3C0D6C1C332BB1003C5921 /* Emoji Search-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Emoji Search-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E3C0D6D1C332BB2003C5921 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2E3C0D6E1C332BB2003C5921 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2E3C0D701C3357B9003C5921 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		2E3C0D721C33595A003C5921 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		D861E1841C322B9B003ED5A7 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = ../Emoji.swift; sourceTree = "<group>"; };
 		D87EEDD31C31C7BC0011D8A5 /* Emoji Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */,
 				D87EEDD81C31C7BC0011D8A5 /* ViewController.swift */,
 				D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */,
+				2E3C0D701C3357B9003C5921 /* CustomSearchBar.swift */,
+				2E3C0D721C33595A003C5921 /* CustomSearchController.swift */,
 				D861E1841C322B9B003ED5A7 /* Emoji.swift */,
 				2E3644831C31E6430094E704 /* EmojiParser.swift */,
 				2E3C0D6D1C332BB2003C5921 /* MBProgressHUD.h */,
@@ -284,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3C0D711C3357B9003C5921 /* CustomSearchBar.swift in Sources */,
 				D861E1851C322B9B003ED5A7 /* Emoji.swift in Sources */,
 				2E3C0D6F1C332BB2003C5921 /* MBProgressHUD.m in Sources */,
 				D87EEDD91C31C7BC0011D8A5 /* ViewController.swift in Sources */,
+				2E3C0D731C33595A003C5921 /* CustomSearchController.swift in Sources */,
 				2E3644841C31E6430094E704 /* EmojiParser.swift in Sources */,
 				D87EEE051C31CA470011D8A5 /* SearchTableViewController.swift in Sources */,
 				D87EEDD71C31C7BC0011D8A5 /* AppDelegate.swift in Sources */,

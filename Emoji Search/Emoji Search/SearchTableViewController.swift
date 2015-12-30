@@ -17,7 +17,7 @@ class SearchTableViewController: UITableViewController {
   var filteredCatagories = NSMutableArray()
   let emojiCatagories = NSMutableArray()
   let sortedEmojiObjects = NSMutableArray()
-  let searchController = UISearchController(searchResultsController: nil)
+  var searchController: CustomSearchController!
   
   
   
@@ -50,22 +50,28 @@ class SearchTableViewController: UITableViewController {
     }
     
     // Setup the Search Controller
+    configureSearchController()
+  }
+  
+  
+  
+  func configureSearchController() {
+    searchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView.frame.size.width, 50.0), searchBarAccentColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
     searchController.searchResultsUpdater = self
     searchController.searchBar.delegate = self
     definesPresentationContext = true
     searchController.dimsBackgroundDuringPresentation = false
-    
-    tableView.tableHeaderView = searchController.searchBar
+    searchController.customSearchBar.placeholder = "Search for your emoji..."
+    tableView.tableHeaderView = searchController.customSearchBar
   }
   
   
   
   override func viewWillAppear(animated: Bool) {
-    searchController.searchBar.becomeFirstResponder()
+    searchController.customSearchBar.becomeFirstResponder()
   }
   
-  
-  
+
   
   
   // MARK: - Table View
@@ -115,13 +121,13 @@ class SearchTableViewController: UITableViewController {
     let cell = tableView.cellForRowAtIndexPath(indexPath)
     UIPasteboard.generalPasteboard().string = cell?.textLabel!.text
     
-    let hud = MBProgressHUD.showHUDAddedTo(navigationController?.view, animated: true)
-    hud.mode = MBProgressHUDMode.Text
-    hud.labelText = (cell?.textLabel!.text)! + "➡️📋"
-    hud.detailsLabelText = "Copied!"
-    hud.margin = 20.0
-    hud.removeFromSuperViewOnHide = true
-    hud.hide(true, afterDelay: 1)
+//    let hud = MBProgressHUD.showHUDAddedTo(navigationController?.view, animated: true)
+//    hud.mode = MBProgressHUDMode.Text
+//    hud.labelText = (cell?.textLabel!.text)! + "➡️📋"
+//    hud.detailsLabelText = "Copied!"
+//    hud.margin = 20.0
+//    hud.removeFromSuperViewOnHide = true
+//    hud.hide(true, afterDelay: 1)
     
     return indexPath
   }
