@@ -119,7 +119,6 @@
 			children = (
 				D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */,
 				D87EEDD81C31C7BC0011D8A5 /* ViewController.swift */,
-				D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */,
 				2E3C0D701C3357B9003C5921 /* CustomSearchBar.swift */,
 				2E3C0D721C33595A003C5921 /* CustomSearchController.swift */,
 				D861E1841C322B9B003ED5A7 /* Emoji.swift */,
@@ -128,6 +127,7 @@
 				2E3C0D6E1C332BB2003C5921 /* MBProgressHUD.m */,
 				2E3C0D6C1C332BB1003C5921 /* Emoji Search-Bridging-Header.h */,
 				D87EEDDA1C31C7BC0011D8A5 /* Main.storyboard */,
+				D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */,
 				D87EEDDD1C31C7BC0011D8A5 /* Assets.xcassets */,
 				D87EEDDF1C31C7BC0011D8A5 /* LaunchScreen.storyboard */,
 				D87EEDE21C31C7BC0011D8A5 /* Info.plist */,

@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   override func viewDidLoad() {
     super.viewDidLoad()
     setNeedsStatusBarAppearanceUpdate()
+    tableView.bounces = false
     
     let parser = EmojiParser()
     emojazz = parser.parseEmoji()
@@ -61,11 +62,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   func configureSearchController() {
-    searchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, self.view.frame.size.width, 50.0), searchBarAccentColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
+    searchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0), searchBarAccentColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
     definesPresentationContext = true
     searchController.dimsBackgroundDuringPresentation = false
     searchController.customSearchBar.placeholder = "Search for your emoji..."
-    tableView.tableHeaderView = searchController.customSearchBar
+    //tableView.tableHeaderView = searchController.customSearchBar
+    self.view.addSubview(searchController.customSearchBar)
     searchController.customDelegate = self
   }
   
@@ -152,15 +154,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     return filteredCatagories[section] as? String
   }
-  
-  
-  
-  
-  func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-    view.tintColor = UIColor(red:0.968, green:0.968, blue:0.968, alpha:1)
-  }
-  
-  
+
   
   
   

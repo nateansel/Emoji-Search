@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xix-RA-i96">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="jjn-3p-3sI" detailTextLabel="EWu-Nw-Hxu" style="IBUITableViewCellStyleValue1" id="Ibe-U9-tri">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -52,7 +52,7 @@
                         <constraints>
                             <constraint firstItem="Xvf-zp-lrh" firstAttribute="top" secondItem="Xix-RA-i96" secondAttribute="bottom" id="kfq-Yd-ge7"/>
                             <constraint firstAttribute="trailing" secondItem="Xix-RA-i96" secondAttribute="trailing" id="n99-bg-WPb"/>
-                            <constraint firstItem="Xix-RA-i96" firstAttribute="top" secondItem="mYT-oN-Lyd" secondAttribute="bottom" id="p4s-PR-5ga"/>
+                            <constraint firstItem="Xix-RA-i96" firstAttribute="top" secondItem="mYT-oN-Lyd" secondAttribute="bottom" constant="50" id="p4s-PR-5ga"/>
                             <constraint firstItem="Xix-RA-i96" firstAttribute="leading" secondItem="hS4-ec-uiy" secondAttribute="leading" id="qIP-jj-Tuk"/>
                         </constraints>
                     </view>
