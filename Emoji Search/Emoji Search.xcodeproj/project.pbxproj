@@ -25,6 +25,8 @@
 		D89EFFE21C33345B008E3CA4 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861E1841C322B9B003ED5A7 /* Emoji.swift */; };
 		D89EFFE31C33345F008E3CA4 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E3644811C31E62D0094E704 /* emojis.json */; };
 		D89EFFE41C3334FB008E3CA4 /* EmojiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3644831C31E6430094E704 /* EmojiParser.swift */; };
+		D89EFFE61C337EBD008E3CA4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFFE51C337EBD008E3CA4 /* DetailViewController.swift */; };
+		D89EFFE71C337EBD008E3CA4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EFFE51C337EBD008E3CA4 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		D87EEDF61C31C7BC0011D8A5 /* Emoji_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji_SearchUITests.swift; sourceTree = "<group>"; };
 		D87EEDF81C31C7BC0011D8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		D89EFFE51C337EBD008E3CA4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 		D87EEDCA1C31C7BC0011D8A5 = {
 			isa = PBXGroup;
 			children = (
+				D89EFFE51C337EBD008E3CA4 /* DetailViewController.swift */,
 				D87EEDD51C31C7BC0011D8A5 /* Emoji Search */,
 				D87EEDEA1C31C7BC0011D8A5 /* Emoji SearchTests */,
 				D87EEDF51C31C7BC0011D8A5 /* Emoji SearchUITests */,
@@ -222,7 +226,7 @@
 				TargetAttributes = {
 					D87EEDD21C31C7BC0011D8A5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 756EWAN4G2;
+						DevelopmentTeam = 37E2RLU4H9;
 					};
 					D87EEDE61C31C7BC0011D8A5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -290,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89EFFE61C337EBD008E3CA4 /* DetailViewController.swift in Sources */,
 				2E3C0D711C3357B9003C5921 /* CustomSearchBar.swift in Sources */,
 				D861E1851C322B9B003ED5A7 /* Emoji.swift in Sources */,
 				2E3C0D6F1C332BB2003C5921 /* MBProgressHUD.m in Sources */,
@@ -307,6 +312,7 @@
 			files = (
 				D89EFFE21C33345B008E3CA4 /* Emoji.swift in Sources */,
 				D89EFFE41C3334FB008E3CA4 /* EmojiParser.swift in Sources */,
+				D89EFFE71C337EBD008E3CA4 /* DetailViewController.swift in Sources */,
 				D87EEDEC1C31C7BC0011D8A5 /* Emoji_SearchTests.swift in Sources */,
 				D89EFFE11C33344F008E3CA4 /* SearchTableViewController.swift in Sources */,
 			);
@@ -442,10 +448,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Emoji Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emoji Search/Emoji Search-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -457,10 +465,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Emoji Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emoji Search/Emoji Search-Bridging-Header.h";
 			};
 			name = Release;

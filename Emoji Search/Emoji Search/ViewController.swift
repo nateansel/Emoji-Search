@@ -170,6 +170,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   
   
+  func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+    let cell = tableView.cellForRowAtIndexPath(indexPath)
+    print(cell?.textLabel!.text)
+    self.performSegueWithIdentifier("toDetail", sender: indexPath)
+  }
+  
+  
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "toDetail" {
+      let cell = tableView.cellForRowAtIndexPath(sender as! NSIndexPath)
+      let emoji = cell?.textLabel!.text
+      var emojiObject = emojiObjects[0] as! Emoji
+      for item in emojiObjects {
+        emojiObject = item as! Emoji
+        if emojiObject.symbol == emoji {
+          break
+        }
+      }
+      let detailView = segue.destinationViewController as! DetailViewController
+      detailView.emojiObject = emojiObject
+//      segue.destinationViewController = DetailViewController()
+//      destinationViewController.emojiObject = emojiObject
+    }
+  }
+  
+  
+  
+  
   
   ///
   ///  Search the list of Emoji objects for anything matching the search string

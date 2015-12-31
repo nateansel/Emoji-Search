@@ -152,6 +152,14 @@ class SearchTableViewController: UITableViewController {
   
   
   
+  override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+    let cell = tableView.cellForRowAtIndexPath(indexPath)
+    print(cell?.textLabel!.text)
+  }
+  
+  
+  
+  
   
   ///
   ///  Search the list of Emoji objects for anything matching the search string

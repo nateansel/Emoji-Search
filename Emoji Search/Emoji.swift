@@ -17,9 +17,9 @@ class Emoji {
   var name     = ""
   var symbol   = ""
   var catagory = ""
-  var keywords = NSArray()
+  var keywords = NSMutableArray()
   
-  init (name: String, symbol: String, catagory: String, keywords: NSArray) {
+  init (name: String, symbol: String, catagory: String, keywords: NSMutableArray) {
     self.name     = name
     self.symbol   = symbol
     self.catagory = catagory

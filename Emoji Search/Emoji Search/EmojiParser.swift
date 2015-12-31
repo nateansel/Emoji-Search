@@ -98,7 +98,7 @@ class EmojiParser {
         Emoji(name: emojiName.capitalizedString,
           symbol: tempValue.objectForKey("char") as! String,
           catagory: category.capitalizedString,
-          keywords: tempValue.objectForKey("keywords") as! NSArray
+          keywords: tempValue.objectForKey("keywords") as! NSMutableArray
         )
       )
     }
