@@ -39,11 +39,67 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     emojazz = parser.parseEmoji()
     emojiObjects = parser.parseEmojiToObjects()
     
+    let tempEmojiCatagories = NSMutableArray()
+    let tempSortedEmojiObjects = NSMutableArray()
+    
     for item in emojiObjects {
-      if emojiCatagories.indexOfObject((item as! Emoji).catagory) == NSNotFound {
-        emojiCatagories.addObject((item as! Emoji).catagory)
+      if tempEmojiCatagories.indexOfObject((item as! Emoji).catagory) == NSNotFound {
+        tempEmojiCatagories.addObject((item as! Emoji).catagory)
+        tempSortedEmojiObjects.addObject(NSMutableArray())
+        emojiCatagories.addObject("")
         sortedEmojiObjects.addObject(NSMutableArray())
       }
+    }
+    
+    /// In keyboard:
+    ///   smileys & people
+    ///   animals & nature
+    ///   food & drink
+    ///   activity
+    ///   travel & places
+    ///   objects
+    ///   symbols
+    ///   flags
+    ///
+    /// In app:
+    ///   smileys & people
+    ///   animals & nature
+    ///   food & drink
+    ///   activity
+    ///   travel & places
+    ///   objects & symbols
+    ///   celebration
+    ///   flags
+    var count = 0
+    var index = 0
+    for item in tempEmojiCatagories {
+      let category = item as! String
+      switch category {
+        case "Smileys & People":
+          index = 0
+        case "Animals & Nature":
+          index = 1
+        case "Food & Drink":
+          index = 2
+        case "Activity":
+          index = 3
+        case "Travel & Places":
+          index = 4
+        case "Objects & Symbols":
+          index = 5
+        case "Celebration":
+          index = 6
+        case "Flags":
+          index = 7
+        default:
+          print("ERROR: Catagory is not valid, not added to sorted array.")
+          index = -1
+      }
+      if index > -1 {
+        emojiCatagories[index] = category
+        sortedEmojiObjects[index] = tempSortedEmojiObjects[count]
+      }
+      count += 1
     }
     
     // Sort the emoji objects by name
