@@ -55,17 +55,17 @@
 		2E3C0D701C3357B9003C5921 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		2E3C0D721C33595A003C5921 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		D861E1841C322B9B003ED5A7 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = ../Emoji.swift; sourceTree = "<group>"; };
-		D87EEDD31C31C7BC0011D8A5 /* Emoji Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87EEDD31C31C7BC0011D8A5 /* Findmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Findmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D87EEDD81C31C7BC0011D8A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D87EEDDB1C31C7BC0011D8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D87EEDDD1C31C7BC0011D8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D87EEDE01C31C7BC0011D8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D87EEDE21C31C7BC0011D8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D87EEDE71C31C7BC0011D8A5 /* Emoji SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Emoji SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87EEDE71C31C7BC0011D8A5 /* Findmoji.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Findmoji.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87EEDEB1C31C7BC0011D8A5 /* Emoji_SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji_SearchTests.swift; sourceTree = "<group>"; };
 		D87EEDED1C31C7BC0011D8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D87EEDF21C31C7BC0011D8A5 /* Emoji SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Emoji SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87EEDF21C31C7BC0011D8A5 /* Findmoji.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Findmoji.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87EEDF61C31C7BC0011D8A5 /* Emoji_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji_SearchUITests.swift; sourceTree = "<group>"; };
 		D87EEDF81C31C7BC0011D8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D87EEE041C31CA470011D8A5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -110,9 +110,9 @@
 		D87EEDD41C31C7BC0011D8A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D87EEDD31C31C7BC0011D8A5 /* Emoji Search.app */,
-				D87EEDE71C31C7BC0011D8A5 /* Emoji SearchTests.xctest */,
-				D87EEDF21C31C7BC0011D8A5 /* Emoji SearchUITests.xctest */,
+				D87EEDD31C31C7BC0011D8A5 /* Findmoji.app */,
+				D87EEDE71C31C7BC0011D8A5 /* Findmoji.xctest */,
+				D87EEDF21C31C7BC0011D8A5 /* Findmoji.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D87EEDD21C31C7BC0011D8A5 /* Emoji Search */ = {
+		D87EEDD21C31C7BC0011D8A5 /* Findmoji */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D87EEDFB1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Emoji Search" */;
+			buildConfigurationList = D87EEDFB1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Findmoji" */;
 			buildPhases = (
 				D87EEDCF1C31C7BC0011D8A5 /* Sources */,
 				D87EEDD01C31C7BC0011D8A5 /* Frameworks */,
@@ -173,14 +173,14 @@
 			);
 			dependencies = (
 			);
-			name = "Emoji Search";
+			name = Findmoji;
 			productName = "Emoji Search";
-			productReference = D87EEDD31C31C7BC0011D8A5 /* Emoji Search.app */;
+			productReference = D87EEDD31C31C7BC0011D8A5 /* Findmoji.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D87EEDE61C31C7BC0011D8A5 /* Emoji SearchTests */ = {
+		D87EEDE61C31C7BC0011D8A5 /* FindmojiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D87EEDFE1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Emoji SearchTests" */;
+			buildConfigurationList = D87EEDFE1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "FindmojiTests" */;
 			buildPhases = (
 				D87EEDE31C31C7BC0011D8A5 /* Sources */,
 				D87EEDE41C31C7BC0011D8A5 /* Frameworks */,
@@ -191,14 +191,14 @@
 			dependencies = (
 				D87EEDE91C31C7BC0011D8A5 /* PBXTargetDependency */,
 			);
-			name = "Emoji SearchTests";
+			name = FindmojiTests;
 			productName = "Emoji SearchTests";
-			productReference = D87EEDE71C31C7BC0011D8A5 /* Emoji SearchTests.xctest */;
+			productReference = D87EEDE71C31C7BC0011D8A5 /* Findmoji.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D87EEDF11C31C7BC0011D8A5 /* Emoji SearchUITests */ = {
+		D87EEDF11C31C7BC0011D8A5 /* FindmojiUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D87EEE011C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Emoji SearchUITests" */;
+			buildConfigurationList = D87EEE011C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "FindmojiUITests" */;
 			buildPhases = (
 				D87EEDEE1C31C7BC0011D8A5 /* Sources */,
 				D87EEDEF1C31C7BC0011D8A5 /* Frameworks */,
@@ -209,9 +209,9 @@
 			dependencies = (
 				D87EEDF41C31C7BC0011D8A5 /* PBXTargetDependency */,
 			);
-			name = "Emoji SearchUITests";
+			name = FindmojiUITests;
 			productName = "Emoji SearchUITests";
-			productReference = D87EEDF21C31C7BC0011D8A5 /* Emoji SearchUITests.xctest */;
+			productReference = D87EEDF21C31C7BC0011D8A5 /* Findmoji.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +226,7 @@
 				TargetAttributes = {
 					D87EEDD21C31C7BC0011D8A5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 756EWAN4G2;
+						DevelopmentTeam = UCUX5A4U9R;
 					};
 					D87EEDE61C31C7BC0011D8A5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -240,7 +240,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D87EEDCE1C31C7BC0011D8A5 /* Build configuration list for PBXProject "Emoji Search" */;
+			buildConfigurationList = D87EEDCE1C31C7BC0011D8A5 /* Build configuration list for PBXProject "Findmoji" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -253,9 +253,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D87EEDD21C31C7BC0011D8A5 /* Emoji Search */,
-				D87EEDE61C31C7BC0011D8A5 /* Emoji SearchTests */,
-				D87EEDF11C31C7BC0011D8A5 /* Emoji SearchUITests */,
+				D87EEDD21C31C7BC0011D8A5 /* Findmoji */,
+				D87EEDE61C31C7BC0011D8A5 /* FindmojiTests */,
+				D87EEDF11C31C7BC0011D8A5 /* FindmojiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,12 +331,12 @@
 /* Begin PBXTargetDependency section */
 		D87EEDE91C31C7BC0011D8A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D87EEDD21C31C7BC0011D8A5 /* Emoji Search */;
+			target = D87EEDD21C31C7BC0011D8A5 /* Findmoji */;
 			targetProxy = D87EEDE81C31C7BC0011D8A5 /* PBXContainerItemProxy */;
 		};
 		D87EEDF41C31C7BC0011D8A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D87EEDD21C31C7BC0011D8A5 /* Emoji Search */;
+			target = D87EEDD21C31C7BC0011D8A5 /* Findmoji */;
 			targetProxy = D87EEDF31C31C7BC0011D8A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,8 +451,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Emoji Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-Search";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicowl.emojisearch;
+				PRODUCT_NAME = Findmoji;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emoji Search/Emoji Search-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -468,8 +468,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Emoji Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-Search";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicowl.emojisearch;
+				PRODUCT_NAME = Findmoji;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emoji Search/Emoji Search-Bridging-Header.h";
 			};
@@ -482,8 +482,8 @@
 				INFOPLIST_FILE = "Emoji SearchTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-SearchTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emoji Search.app/Emoji Search";
+				PRODUCT_NAME = Findmoji;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Findmoji.app/Findmoji";
 			};
 			name = Debug;
 		};
@@ -494,8 +494,8 @@
 				INFOPLIST_FILE = "Emoji SearchTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-SearchTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emoji Search.app/Emoji Search";
+				PRODUCT_NAME = Findmoji;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Findmoji.app/Findmoji";
 			};
 			name = Release;
 		};
@@ -505,7 +505,7 @@
 				INFOPLIST_FILE = "Emoji SearchUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-SearchUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Findmoji;
 				TEST_TARGET_NAME = "Emoji Search";
 				USES_XCTRUNNER = YES;
 			};
@@ -517,7 +517,7 @@
 				INFOPLIST_FILE = "Emoji SearchUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Emoji-SearchUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Findmoji;
 				TEST_TARGET_NAME = "Emoji Search";
 				USES_XCTRUNNER = YES;
 			};
@@ -526,7 +526,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D87EEDCE1C31C7BC0011D8A5 /* Build configuration list for PBXProject "Emoji Search" */ = {
+		D87EEDCE1C31C7BC0011D8A5 /* Build configuration list for PBXProject "Findmoji" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D87EEDF91C31C7BC0011D8A5 /* Debug */,
@@ -535,7 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D87EEDFB1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Emoji Search" */ = {
+		D87EEDFB1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Findmoji" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D87EEDFC1C31C7BC0011D8A5 /* Debug */,
@@ -544,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D87EEDFE1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Emoji SearchTests" */ = {
+		D87EEDFE1C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "FindmojiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D87EEDFF1C31C7BC0011D8A5 /* Debug */,
@@ -553,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D87EEE011C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "Emoji SearchUITests" */ = {
+		D87EEE011C31C7BC0011D8A5 /* Build configuration list for PBXNativeTarget "FindmojiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D87EEE021C31C7BC0011D8A5 /* Debug */,

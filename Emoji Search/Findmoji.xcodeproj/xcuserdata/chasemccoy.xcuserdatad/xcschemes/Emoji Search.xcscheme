@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D87EEDD21C31C7BC0011D8A5"
-               BuildableName = "Emoji Search.app"
-               BlueprintName = "Emoji Search"
-               ReferencedContainer = "container:Emoji Search.xcodeproj">
+               BuildableName = "Findmoji.app"
+               BlueprintName = "Findmoji"
+               ReferencedContainer = "container:Findmoji.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D87EEDE61C31C7BC0011D8A5"
-               BuildableName = "Emoji SearchTests.xctest"
-               BlueprintName = "Emoji SearchTests"
-               ReferencedContainer = "container:Emoji Search.xcodeproj">
+               BuildableName = "Findmoji.xctest"
+               BlueprintName = "FindmojiTests"
+               ReferencedContainer = "container:Findmoji.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D87EEDF11C31C7BC0011D8A5"
-               BuildableName = "Emoji SearchUITests.xctest"
-               BlueprintName = "Emoji SearchUITests"
-               ReferencedContainer = "container:Emoji Search.xcodeproj">
+               BuildableName = "Findmoji.xctest"
+               BlueprintName = "FindmojiUITests"
+               ReferencedContainer = "container:Findmoji.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D87EEDD21C31C7BC0011D8A5"
-            BuildableName = "Emoji Search.app"
-            BlueprintName = "Emoji Search"
-            ReferencedContainer = "container:Emoji Search.xcodeproj">
+            BuildableName = "Findmoji.app"
+            BlueprintName = "Findmoji"
+            ReferencedContainer = "container:Findmoji.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D87EEDD21C31C7BC0011D8A5"
-            BuildableName = "Emoji Search.app"
-            BlueprintName = "Emoji Search"
-            ReferencedContainer = "container:Emoji Search.xcodeproj">
+            BuildableName = "Findmoji.app"
+            BlueprintName = "Findmoji"
+            ReferencedContainer = "container:Findmoji.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D87EEDD21C31C7BC0011D8A5"
-            BuildableName = "Emoji Search.app"
-            BlueprintName = "Emoji Search"
-            ReferencedContainer = "container:Emoji Search.xcodeproj">
+            BuildableName = "Findmoji.app"
+            BlueprintName = "Findmoji"
+            ReferencedContainer = "container:Findmoji.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
