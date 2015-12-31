@@ -19,6 +19,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   let sortedEmojiObjects = NSMutableArray()
   var searchController: CustomSearchController!
   
+  var keyboardFrame: CGRect!
+  @IBOutlet var tableViewHeightConstraint: NSLayoutConstraint!
+  
   @IBOutlet var tableView: UITableView!
   
   
@@ -29,7 +32,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   override func viewDidLoad() {
     super.viewDidLoad()
     setNeedsStatusBarAppearanceUpdate()
-    tableView.bounces = false
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
     
     let parser = EmojiParser()
     emojazz = parser.parseEmoji()
@@ -304,6 +308,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .LightContent
+  }
+  
+  func keyboardWillShow(notification: NSNotification) {
+    keyboardFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+    
+    tableViewHeightConstraint.constant = view.frame.size.height - keyboardFrame.size.height - 70
   }
 
 

@@ -18,8 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xix-RA-i96">
-                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="450"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="wTJ-Oh-4so"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="jjn-3p-3sI" detailTextLabel="EWu-Nw-Hxu" style="IBUITableViewCellStyleValue1" id="Ibe-U9-tri">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -55,9 +58,15 @@
                             <constraint firstItem="Xix-RA-i96" firstAttribute="top" secondItem="mYT-oN-Lyd" secondAttribute="bottom" constant="50" id="p4s-PR-5ga"/>
                             <constraint firstItem="Xix-RA-i96" firstAttribute="leading" secondItem="hS4-ec-uiy" secondAttribute="leading" id="qIP-jj-Tuk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kfq-Yd-ge7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Xix-RA-i96" id="wSc-yd-iq2"/>
+                        <outlet property="tableViewHeightConstraint" destination="wTJ-Oh-4so" id="RCc-MQ-6tB"/>
                         <segue destination="hQS-DA-CJ8" kind="show" identifier="toDetail" id="gUx-yb-5MA"/>
                     </connections>
                 </viewController>
