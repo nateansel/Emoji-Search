@@ -91,6 +91,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   
+//  func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+//    var indexArray = [String]()
+//    for categoryName in emojiCatagories {
+//      let name = categoryName as! String
+//      let firstChar = name[name.startIndex]
+//      indexArray.append(String(firstChar))
+//    }
+//    return indexArray
+//  }
+  
+  
+  
+  
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if searchController.customSearchBar.text! == "" {
