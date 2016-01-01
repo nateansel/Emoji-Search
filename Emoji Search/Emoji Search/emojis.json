@@ -674,6 +674,111 @@
     "char": "🙏",
     "category": "smileys_&_people"
   },
+  "slightly_smiling": {
+    "keywords": ["face", "smile"],
+    "char": "🙂",
+    "category": "smileys_&_people"
+  },
+  "hugging": {
+    "keywords": ["face", "smile"],
+    "char": "🤗",
+    "category": "smileys_&_people"
+  },
+  "thinking": {
+    "keywords": ["face"],
+    "char": "🤔",
+    "category": "smileys_&_people"
+  },
+  "rolling_eyes": {
+    "keywords": ["face", "eyeroll", "frustrated"],
+    "char": "🙄",
+    "category": "smileys_&_people"
+  },
+  "zipper_mouth": {
+    "keywords": ["face", "sealed"],
+    "char": "🤐",
+    "category": "smileys_&_people"
+  },
+  "nerd": {
+    "keywords": ["face", "nerdy", "geek", "dork"],
+    "char": "🤓",
+    "category": "smileys_&_people"
+  },
+  "white_frowning": {
+    "keywords": ["face", "sad"],
+    "char": "☹️",
+    "category": "smileys_&_people"
+  },
+  "slightly_sad": {
+    "keywords": ["face", "frowning", "disappointed"],
+    "char": "🙁",
+    "category": "smileys_&_people"
+  },
+  "upside_down": {
+    "keywords": ["face", "flipped", "silly", "smile"],
+    "char": "🙃",
+    "category": "smileys_&_people"
+  },
+  "thermometer_face": {
+    "keywords": ["sick", "temperature"],
+    "char": "🤒",
+    "category": "smileys_&_people"
+  },
+  "bandage_face": {
+    "keywords": ["injured", "clumsy"],
+    "char": "🤕",
+    "category": "smileys_&_people"
+  },
+  "money_mouth": {
+    "keywords": ["face", "rich", "dollar"],
+    "char": "🤑",
+    "category": "smileys_&_people"
+  },
+  "speaking_head": {
+    "keywords": ["user", "person", "human"],
+    "char": "🗣",
+    "category": "smileys_&_people"
+  },
+  "man_levitating": {
+    "keywords": ["suit", "business", "levitate", "hover", "jump"],
+    "char": "🕴",
+    "category": "smileys_&_people"
+  },
+  "helmet": {
+    "keywords": ["construction", "build"],
+    "char": "⛑",
+    "category": "smileys_&_people"
+  },
+  "sleuth": {
+    "keywords": ["human", "spy", "detective"],
+    "char": "🕵",
+    "category": "smileys_&_people"
+  },
+  "eye": {
+    "keywords": ["face", "look", "see", "watch", "stare"],
+    "char": "👁",
+    "category": "smileys_&_people"
+  },
+  "middle_finger": {
+    "keywords": ["hand", "fingers", "rude"],
+    "char": "🖕",
+    "category": "smileys_&_people"
+  },
+  "sign_of_horns": {
+    "keywords": ["hand", "fingers", "evil_eye", "metal", "rock_on"],
+    "char": "🤘",
+    "category": "smileys_&_people"
+  },
+  "splayed_fingers": {
+    "keywords": ["raised_hand"],
+    "char": "🖐",
+    "category": "smileys_&_people"
+  },
+  "writing_hand": {
+    "keywords": ["pen"],
+    "char": "✍",
+    "category": "smileys_&_people"
+  },
   "seedling": {
     "keywords": ["plant", "nature", "grass", "lawn", "spring"],
     "char": "🌱",
@@ -2685,7 +2790,7 @@
     "category": "objects_&_symbols"
   },
   "eyeglasses": {
-    "keywords": ["fashion", "accessories", "eyesight", "nerd", "dork", "geek"],
+    "keywords": ["fashion", "accessories", "eyesight", "nerdy", "dork", "geek"],
     "char": "👓",
     "category": "objects_&_symbols"
   },
