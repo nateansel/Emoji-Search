@@ -50,7 +50,7 @@ class CustomSearchBar: UISearchBar {
     }
     
     let startPoint = CGPointMake(0.0, frame.size.height)
-    let endPoint = CGPointMake(frame.size.width, frame.size.height)
+    let endPoint = CGPointMake(frame.size.width * 5, frame.size.height)
     let path = UIBezierPath()
     path.moveToPoint(startPoint)
     path.addLineToPoint(endPoint)

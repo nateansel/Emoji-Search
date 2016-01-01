@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     setNeedsStatusBarAppearanceUpdate()
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated:", name: UIDeviceOrientationDidChangeNotification, object: nil)
     
     let parser = EmojiParser()
     emojazz = parser.parseEmoji()
@@ -371,7 +372,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     tableViewHeightConstraint.constant = view.frame.size.height - keyboardFrame.size.height - 70
   }
-
+  
+  override func prefersStatusBarHidden() -> Bool {
+    return false
+  }
+  
+  
+  func rotated(notification: NSNotification) {
+    searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
+  }
 
 }
 
