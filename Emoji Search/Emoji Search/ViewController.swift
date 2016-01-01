@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     setNeedsStatusBarAppearanceUpdate()
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated:", name: UIDeviceOrientationDidChangeNotification, object: nil)
     
     let parser = EmojiParser()
@@ -126,7 +127,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     searchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0), searchBarAccentColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
     definesPresentationContext = true
     searchController.dimsBackgroundDuringPresentation = false
-    searchController.customSearchBar.placeholder = "Search for your emoji..."
+    searchController.customSearchBar.placeholder = "Search by keyword or category"
     //tableView.tableHeaderView = searchController.customSearchBar
     self.view.addSubview(searchController.customSearchBar)
     searchController.customDelegate = self
@@ -371,6 +372,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     keyboardFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
     
     tableViewHeightConstraint.constant = view.frame.size.height - keyboardFrame.size.height - 70
+    searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
+  }
+  
+  func keyboardWillHide(notification: NSNotification) {
+    tableViewHeightConstraint.constant = view.frame.size.height - 70
+    searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
   }
   
   override func prefersStatusBarHidden() -> Bool {
@@ -379,6 +386,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   func rotated(notification: NSNotification) {
+    searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
     searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
   }
 

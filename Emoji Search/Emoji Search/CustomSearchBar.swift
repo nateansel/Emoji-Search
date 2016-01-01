@@ -29,7 +29,7 @@ class CustomSearchBar: UISearchBar {
     var index: Int!
     let searchBarView = subviews[0] 
     
-    for var i=0; i<searchBarView.subviews.count; ++i {
+    for var i = 0; i < searchBarView.subviews.count; ++i {
       if searchBarView.subviews[i] is UITextField {
         index = i
         break
@@ -43,7 +43,7 @@ class CustomSearchBar: UISearchBar {
     if let index = indexOfSearchFieldInSubviews() {
       let searchField: UITextField = (subviews[0] ).subviews[index] as! UITextField
       
-      searchField.frame = CGRectMake(5.0, 5.0, frame.size.width - 10.0, frame.size.height - 10.0)
+      searchField.frame = CGRectMake(1.0, 1.0, frame.size.width - 2.0, frame.size.height - 2.0)
       
       searchField.backgroundColor = barTintColor
       searchField.textColor = UIColor.whiteColor()
@@ -61,7 +61,7 @@ class CustomSearchBar: UISearchBar {
     shapeLayer.lineWidth = 4
     
     layer.addSublayer(shapeLayer)
-    
+        
     super.drawRect(rect)
   }
 
