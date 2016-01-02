@@ -12,6 +12,7 @@
 		2E3C0D6F1C332BB2003C5921 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C0D6E1C332BB2003C5921 /* MBProgressHUD.m */; };
 		2E3C0D711C3357B9003C5921 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C0D701C3357B9003C5921 /* CustomSearchBar.swift */; };
 		2E3C0D731C33595A003C5921 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C0D721C33595A003C5921 /* CustomSearchController.swift */; };
+		D805320D1C36FBD7006E8826 /* emojis2.json in Resources */ = {isa = PBXBuildFile; fileRef = D805320C1C36FBD7006E8826 /* emojis2.json */; };
 		D861E1851C322B9B003ED5A7 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861E1841C322B9B003ED5A7 /* Emoji.swift */; };
 		D87EEDD71C31C7BC0011D8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */; };
 		D87EEDD91C31C7BC0011D8A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87EEDD81C31C7BC0011D8A5 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		2E3C0D6E1C332BB2003C5921 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2E3C0D701C3357B9003C5921 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		2E3C0D721C33595A003C5921 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
+		D805320C1C36FBD7006E8826 /* emojis2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emojis2.json; sourceTree = "<group>"; };
 		D861E1841C322B9B003ED5A7 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emoji.swift; path = ../Emoji.swift; sourceTree = "<group>"; };
 		D87EEDD31C31C7BC0011D8A5 /* Findmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Findmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87EEDD61C31C7BC0011D8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		D87EEDCA1C31C7BC0011D8A5 = {
 			isa = PBXGroup;
 			children = (
+				D805320C1C36FBD7006E8826 /* emojis2.json */,
 				D87EEDD51C31C7BC0011D8A5 /* Emoji Search */,
 				D87EEDEA1C31C7BC0011D8A5 /* Emoji SearchTests */,
 				D87EEDF51C31C7BC0011D8A5 /* Emoji SearchUITests */,
@@ -269,6 +272,7 @@
 				D87EEDDE1C31C7BC0011D8A5 /* Assets.xcassets in Resources */,
 				2E3644821C31E62D0094E704 /* emojis.json in Resources */,
 				D87EEDDC1C31C7BC0011D8A5 /* Main.storyboard in Resources */,
+				D805320D1C36FBD7006E8826 /* emojis2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,6 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       }
     }
     
+    /// Catagories:
     /// In keyboard:
     ///   smileys & people
     ///   animals & nature
@@ -119,6 +120,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Setup the Search Controller
     configureSearchController()
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    
+    parser.parseEmojiObjectsToJSON(emojiObjects)
   }
   
   
