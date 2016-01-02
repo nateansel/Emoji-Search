@@ -210,14 +210,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cell = tableView.cellForRowAtIndexPath(indexPath)
     UIPasteboard.generalPasteboard().string = cell?.textLabel!.text
     
-//    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-//    hud.mode = MBProgressHUDMode.Text
-//    hud.labelText = (cell?.textLabel!.text)! + " ➡️ 📋"
-//    hud.detailsLabelText = "Copied!"
-//    hud.margin = 20.0
-//    hud.removeFromSuperViewOnHide = true
-//    hud.hide(true, afterDelay: 1)
-    
     let window = UIApplication.sharedApplication().windows.last
     let hud = MBProgressHUD.showHUDAddedTo(window, animated: true)
     hud.mode = MBProgressHUDMode.Text
