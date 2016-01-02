@@ -14,16 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-    print("url received: \(url)\n")
-    print("scheme: \(url.scheme)\n")
-    print("query string: \(url.query)\n")
-    print("host: \(url.host)\n")
+//    print("url received: \(url)\n")
+//    print("scheme: \(url.scheme)\n")
+//    print("query string: \(url.query)\n")
+//    print("host: \(url.host)\n")
     
     if url.host == "search" {
       if let query: String = url.query {
         let queryArray = query.componentsSeparatedByString("=")
-        let searchTerm = queryArray[1]
-        print(searchTerm)
+        var searchTerm = queryArray[1]
+        searchTerm = searchTerm.stringByReplacingOccurrencesOfString("%20", withString: " ")
         let viewController = self.window?.rootViewController as! ViewController
         viewController.searchController.customSearchBar.text = searchTerm
         viewController.filterContentForSearchText(searchTerm)

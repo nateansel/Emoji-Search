@@ -141,8 +141,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   override func viewWillAppear(animated: Bool) {
     searchController.customSearchBar.becomeFirstResponder()
-    let parser = EmojiParser()
-    parser.parseEmojiObjectsToJSON(emojiObjects)
+    //let parser = EmojiParser()
+    //parser.parseEmojiObjectsToJSON(emojiObjects)
   }
   
   
