@@ -33,9 +33,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     super.viewDidLoad()
     setNeedsStatusBarAppearanceUpdate()
     
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated:", name: UIDeviceOrientationDidChangeNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "URLSearch:", name: "search", object: nil)
     
     let parser = EmojiParser()
     emojazz = parser.parseEmoji()
@@ -121,10 +123,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Setup the Search Controller
     configureSearchController()
     
-    
     ////////////////////////////////////////////////////////////////////////////////
     
     parser.parseEmojiObjectsToJSON(emojiObjects)
+    tableViewHeightConstraint.constant = view.frame.size.height - 70
   }
   
   
@@ -208,14 +210,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cell = tableView.cellForRowAtIndexPath(indexPath)
     UIPasteboard.generalPasteboard().string = cell?.textLabel!.text
     
-    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//    hud.mode = MBProgressHUDMode.Text
+//    hud.labelText = (cell?.textLabel!.text)! + " ➡️ 📋"
+//    hud.detailsLabelText = "Copied!"
+//    hud.margin = 20.0
+//    hud.removeFromSuperViewOnHide = true
+//    hud.hide(true, afterDelay: 1)
+    
+    let window = UIApplication.sharedApplication().windows.last
+    let hud = MBProgressHUD.showHUDAddedTo(window, animated: true)
     hud.mode = MBProgressHUDMode.Text
     hud.labelText = (cell?.textLabel!.text)! + " ➡️ 📋"
     hud.detailsLabelText = "Copied!"
     hud.margin = 20.0
     hud.removeFromSuperViewOnHide = true
-    hud.hide(true, afterDelay: 1)
-    
+    hud.hide(true, afterDelay: 1.0)
+  
     return indexPath
   }
   
@@ -320,17 +331,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // So you can see the changes
     tableView.reloadData()
   }
-  
-  
-  
-//  func updateSearchResultsForSearchController(searchController: UISearchController) {
-//    filterContentForSearchText(searchController.searchBar.text!)
-//  }
-//  
-//  func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-//    filterContentForSearchText(searchController.searchBar.text!)
-//  }
-  
+
   
   
   
@@ -374,7 +375,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     return .LightContent
   }
   
-  func keyboardWillShow(notification: NSNotification) {
+  func keyboardDidShow(notification: NSNotification) {
     keyboardFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
     
     tableViewHeightConstraint.constant = view.frame.size.height - keyboardFrame.size.height - 70
@@ -393,8 +394,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func rotated(notification: NSNotification) {
     searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
-    searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
   }
+  
+  func URLSearch(notification: NSNotification) {
+    let searchString = notification.object as! String
+    filterContentForSearchText(searchString)
+    searchController.customSearchBar.text = searchString
+  }
+
 
 }
 

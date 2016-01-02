@@ -12,6 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  
+  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+    print("url received: \(url)\n")
+    print("scheme: \(url.scheme)\n")
+    print("query string: \(url.query)\n")
+    print("host: \(url.host)\n")
+    
+    if url.host == "search" {
+      if let query: String = url.query {
+        let queryArray = query.componentsSeparatedByString("=")
+        let searchTerm = queryArray[1]
+        print(searchTerm)
+        //NSNotificationCenter.defaultCenter().postNotificationName("search", object: searchTerm)
+        let viewController = self.window?.rootViewController as! ViewController
+        viewController.searchController.customSearchBar.text = searchTerm
+        viewController.filterContentForSearchText(searchTerm)
+      }
+    }
+    
+    return true
+  }
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -21,7 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationWillResignActive(application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.    
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.   
+    
+    let viewController = self.window?.rootViewController as! ViewController
+    viewController.searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, viewController.view.frame.size.width, 50.0)
+    viewController.searchController.customSearchBar.becomeFirstResponder()
   }
 
   func applicationDidEnterBackground(application: UIApplication) {
