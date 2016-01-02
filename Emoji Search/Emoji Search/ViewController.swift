@@ -37,7 +37,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated:", name: UIDeviceOrientationDidChangeNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated:", name: UIApplicationWillEnterForegroundNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "URLSearch:", name: "search", object: nil)
     
     let parser = EmojiParser()
     emojazz = parser.parseEmoji()

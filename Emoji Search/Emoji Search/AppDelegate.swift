@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let queryArray = query.componentsSeparatedByString("=")
         let searchTerm = queryArray[1]
         print(searchTerm)
-        //NSNotificationCenter.defaultCenter().postNotificationName("search", object: searchTerm)
         let viewController = self.window?.rootViewController as! ViewController
         viewController.searchController.customSearchBar.text = searchTerm
         viewController.filterContentForSearchText(searchTerm)
