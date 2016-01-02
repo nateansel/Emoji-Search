@@ -383,6 +383,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   func rotated(notification: NSNotification) {
+    searchController.customSearchBar.becomeFirstResponder()
     searchController.customSearchBar.frame = CGRectMake(0.0, 20.0, self.view.frame.size.width, 50.0)
   }
   
