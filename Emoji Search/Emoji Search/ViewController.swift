@@ -123,9 +123,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Setup the Search Controller
     configureSearchController()
     
-    ////////////////////////////////////////////////////////////////////////////////
-    
-    parser.parseEmojiObjectsToJSON(emojiObjects)
     tableViewHeightConstraint.constant = view.frame.size.height - 70
   }
   
@@ -145,6 +142,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   override func viewWillAppear(animated: Bool) {
     searchController.customSearchBar.becomeFirstResponder()
+    let parser = EmojiParser()
+    parser.parseEmojiObjectsToJSON(emojiObjects)
   }
   
   

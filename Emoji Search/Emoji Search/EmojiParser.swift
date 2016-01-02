@@ -113,28 +113,14 @@ class EmojiParser {
   
   
   func parseEmojiObjectsToJSON(emojiObjects: NSArray) {
-    let filePath = NSBundle.mainBundle().pathForResource("emojis2", ofType: "json")
+    let filePath = NSBundle.mainBundle().pathForResource("emojis", ofType: "json")
     let fileOutput = NSOutputStream(toFileAtPath: filePath!, append: false)
     var JSON = NSData()
     fileOutput?.open()
-//    var fileString = NSString();
-//    var JSON = NSDictionary();
-//    fileOutput = 
-//    do {
-//      try fileOutput = NSOutputStream(toFileAtPath: filePath!, append: false)!
-////      try fileString = NSString.init(contentsOfFile: filePath!, encoding: NSUTF8StringEncoding)
-//    }
-//    catch {
-//      print("FAILURE")
-//    }
-    
-    
     
     let saveData = NSMutableDictionary()
     var count = 0
     for item in emojiObjects {
-      print(count)
-      count += 1
       let emoji = item as! Emoji
       let tempDictionary = NSMutableDictionary()
       tempDictionary.setObject(emoji.keywords, forKey: "keywords")
@@ -143,34 +129,21 @@ class EmojiParser {
       saveData.setObject(tempDictionary, forKey: emoji.name.stringByReplacingOccurrencesOfString(" ", withString: "_"))
     }
     
-    print("done adding to dictionary")
-    
-    do {
-      try JSON = NSJSONSerialization.dataWithJSONObject(saveData, options: .PrettyPrinted)
-    }
-    catch {
-      print("FAILURE")
-    }
-    
-//    print(NSString(data: JSON, encoding: NSASCIIStringEncoding))
-    
     NSJSONSerialization.writeJSONObject(saveData, toStream: fileOutput!, options: .PrettyPrinted, error: nil)
-//    NSJSONSerialization.writeJSONObject(JSON, toStream: fileOutput!, options: NSJSONWritingOptions.PrettyPrinted, error: nil)
     fileOutput?.close()
     
+    print("Parsing Emoji objects to JSON complete.")
     
-    var fileString = NSString()
+    var fileString = NSString();
     
     do {
-      try fileString = NSString.init(contentsOfFile: NSBundle.mainBundle().pathForResource("emojis2", ofType: "json")!, encoding: NSUTF8StringEncoding)
+      try fileString = NSString.init(contentsOfFile: filePath!, encoding: NSUTF8StringEncoding)
     }
     catch {
       print("FAILURE")
     }
     
     print(fileString)
-    
-    print("Parsing Emoji objects to JSON complete.")
   }
   
   
