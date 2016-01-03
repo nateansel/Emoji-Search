@@ -321,7 +321,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // So you can see the changes
     tableView.reloadData()
   }
-
+  
+  func filterContentForSearchText2(searchText: String) {
+    filteredEmoji = emojiObjects
+    filteredCatagories = emojiCatagories
+    
+    for word in searchText.componentsSeparatedByString(" ") {
+      for emoji in filteredEmoji as AnyObject as! [Emoji] {
+        for keyword in emoji.keywords {
+          if !keyword.lowercaseString.containsString(word.lowercaseString) {
+            filteredEmoji.removeObject(emoji)
+          }
+          else {
+            if !emoji.name.lowercaseString.containsString(word.lowercaseString)
+              || !emoji.symbol.containsString(word) {
+                filteredEmoji.removeObject(emoji)
+            }
+          }
+        }
+      }
+    }
+    
+    tableView.reloadData()
+  }
+  
   
   
   
