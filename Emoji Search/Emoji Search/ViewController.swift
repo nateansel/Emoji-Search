@@ -141,8 +141,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   override func viewWillAppear(animated: Bool) {
     searchController.customSearchBar.becomeFirstResponder()
-    //let parser = EmojiParser()
-    //parser.parseEmojiObjectsToJSON(emojiObjects)
   }
   
   
@@ -240,8 +238,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-    let cell = tableView.cellForRowAtIndexPath(indexPath)
-    print(cell?.textLabel!.text)
     self.performSegueWithIdentifier("toDetail", sender: indexPath)
   }
   
@@ -269,76 +265,63 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   
+  
   ///
   ///  Search the list of Emoji objects for anything matching the search string
   ///  and put it in the filteredEmoji list for display purposes.
   ///
-  /// - author: Nathan Ansel
+  /// - author: Chase McCoy
   /// - parameter searchText: The search string to be used when searching the
   ///                         emoji objects.
   ///
-  func filterContentForSearchText(searchText: String) {
-    // Clear out the old search
-    filteredEmoji.removeAllObjects()
-    filteredCatagories.removeAllObjects()
-    var addEmoji = false
-    
-    // For each of the search terms
-    for word in searchText.componentsSeparatedByString(" ") {
-      // For each of the emoji in the JSON
-      for emoji in emojiObjects {
-        let emojiObject = emoji as! Emoji
-        
-        // See if any part of the emoji matches the word if so we will add it
-        for keyword in emojiObject.keywords {
-          if keyword.lowercaseString.containsString(word.lowercaseString) {
-            addEmoji = true
-          }
-        }
-        if !addEmoji
-          && (emojiObject.name.lowercaseString.containsString(word.lowercaseString)
-            || emojiObject.symbol.containsString(word)) {
-              addEmoji = true
-        }
-        
-        // Actually add the emoji object to the list of filtered
-        if addEmoji {
-          // But first add the catagory if it is a new one
-          if filteredCatagories.indexOfObject(emojiObject.catagory) == NSNotFound {
-            filteredCatagories.addObject(emojiObject.catagory)
-            filteredEmoji.addObject(NSMutableArray())
-          }
-          // Now grab the index and add the emoji object
-          let catagoryIndex = filteredCatagories.indexOfObject(emojiObject.catagory)
-          if filteredEmoji[catagoryIndex].indexOfObject(emojiObject) == NSNotFound {
-            filteredEmoji[catagoryIndex].addObject(emojiObject)
-          }
-          // Set this back to false so all emoji don't get added
-          addEmoji = false
-        }
+  func filterContentForSearchText2(searchText: String) {
+    let tempSortedEmoji = NSMutableArray()
+    for categoryArray in sortedEmojiObjects {
+      for emoji in categoryArray as! NSArray {
+        tempSortedEmoji.addObject(emoji)
       }
     }
-    // So you can see the changes
-    tableView.reloadData()
-  }
-  
-  func filterContentForSearchText2(searchText: String) {
-    filteredEmoji = emojiObjects
-    filteredCatagories = emojiCatagories
     
+    var keepEmoji = false
     for word in searchText.componentsSeparatedByString(" ") {
-      for emoji in filteredEmoji as AnyObject as! [Emoji] {
+      if word == "" {
+        break
+      }
+      for emoji in tempSortedEmoji as AnyObject as! [Emoji] {
         for keyword in emoji.keywords {
-          if !keyword.lowercaseString.containsString(word.lowercaseString) {
-            filteredEmoji.removeObject(emoji)
-          }
-          else {
-            if !emoji.name.lowercaseString.containsString(word.lowercaseString)
-              || !emoji.symbol.containsString(word) {
-                filteredEmoji.removeObject(emoji)
-            }
+          if keyword.lowercaseString.containsString(word.lowercaseString) {
+            keepEmoji = true
           }
         }
+        if emoji.name.lowercaseString.containsString(word.lowercaseString)
+          || emoji.symbol.containsString(word)
+          || emoji.catagory.lowercaseString.containsString(word.lowercaseString) {
+            keepEmoji = true
+        }
+        
+        if !keepEmoji {
+          tempSortedEmoji.removeObject(emoji)
+        }
+        keepEmoji = false
+      }
+    }
+    
+    filteredEmoji.removeAllObjects()
+    filteredCatagories.removeAllObjects()
+    
+    // Sort the emoji and put them in the correct spots
+    for emoji in tempSortedEmoji {
+      let emojiObject = emoji as! Emoji
+      
+      // First add the catagory if it is a new one
+      if filteredCatagories.indexOfObject(emojiObject.catagory) == NSNotFound {
+        filteredCatagories.addObject(emojiObject.catagory)
+        filteredEmoji.addObject(NSMutableArray())
+      }
+      // Now grab the index and add the emoji object
+      let catagoryIndex = filteredCatagories.indexOfObject(emojiObject.catagory)
+      if filteredEmoji[catagoryIndex].indexOfObject(emojiObject) == NSNotFound {
+        filteredEmoji[catagoryIndex].addObject(emojiObject)
       }
     }
     
@@ -355,7 +338,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       return
     }
     
-    filterContentForSearchText(searchString)
+    filterContentForSearchText2(searchString)
     
     //tableView.reloadData()
   }
@@ -377,7 +360,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   func didChangeSearchText(searchText: String) {
-    filterContentForSearchText(searchText)
+    filterContentForSearchText2(searchText)
     //tableView.reloadData()
   }
   
@@ -412,7 +395,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func URLSearch(notification: NSNotification) {
     let searchString = notification.object as! String
-    filterContentForSearchText(searchString)
+    filterContentForSearchText2(searchString)
     searchController.customSearchBar.text = searchString
   }
 
