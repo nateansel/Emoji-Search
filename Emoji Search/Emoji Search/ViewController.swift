@@ -274,7 +274,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   /// - parameter searchText: The search string to be used when searching the
   ///                         emoji objects.
   ///
-  func filterContentForSearchText2(searchText: String) {
+  func filterContentForSearchText(searchText: String) {
     let tempSortedEmoji = NSMutableArray()
     for categoryArray in sortedEmojiObjects {
       for emoji in categoryArray as! NSArray {
@@ -338,9 +338,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       return
     }
     
-    filterContentForSearchText2(searchString)
-    
-    //tableView.reloadData()
+    filterContentForSearchText(searchString)
   }
 
   
@@ -360,7 +358,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   
   func didChangeSearchText(searchText: String) {
-    filterContentForSearchText2(searchText)
+    filterContentForSearchText(searchText)
     //tableView.reloadData()
   }
   
@@ -395,7 +393,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func URLSearch(notification: NSNotification) {
     let searchString = notification.object as! String
-    filterContentForSearchText2(searchString)
+    filterContentForSearchText(searchString)
     searchController.customSearchBar.text = searchString
   }
 
