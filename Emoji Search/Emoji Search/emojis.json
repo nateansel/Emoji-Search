@@ -5,27 +5,27 @@
     "category": "smileys_&_people"
   },
   "grin": {
-    "keywords": ["face", "happy", "smile", "joy"],
+    "keywords": ["face", "happy", "smile", "joy", "crunchy"],
     "char": "😁",
     "category": "smileys_&_people"
   },
   "joy": {
-    "keywords": ["face", "cry", "tears", "weep", "happy", "haha"],
+    "keywords": ["face", "cry", "tears", "weep", "happy", "haha", "laugh"],
     "char": "😂",
     "category": "smileys_&_people"
   },
   "smiley": {
-    "keywords": ["face", "happy", "joy", "haha"],
+    "keywords": ["face", "happy", "joy", "haha", "laugh"],
     "char": "😃",
     "category": "smileys_&_people"
   },
   "smile": {
-    "keywords": ["face", "happy", "joy", "funny", "haha", "laugh", "like"],
+    "keywords": ["face", "happy", "joy", "funny", "lol", "haha", "laugh", "like"],
     "char": "😄",
     "category": "smileys_&_people"
   },
   "sweat_smile": {
-    "keywords": ["face", "hot", "happy", "laugh", "smile"],
+    "keywords": ["face", "hot", "happy", "laugh", "smile", "sweat", "close call"],
     "char": "😅",
     "category": "smileys_&_people"
   },
@@ -35,87 +35,87 @@
     "category": "smileys_&_people"
   },
   "innocent": {
-    "keywords": ["face", "angel", "heaven", "halo"],
+    "keywords": ["face", "angel", "heaven", "halo", "smile", "good"],
     "char": "😇",
     "category": "smileys_&_people"
   },
   "smiling_imp": {
-    "keywords": ["devil", "horns"],
+    "keywords": ["devil", "horns", "evil", "satan"],
     "char": "😈",
     "category": "smileys_&_people"
   },
   "imp": {
-    "keywords": ["devil", "angry", "horns"],
+    "keywords": ["devil", "angry", "horns", "evil", "mad", "satan"],
     "char": "👿",
     "category": "smileys_&_people"
   },
   "wink": {
-    "keywords": ["face", "happy", "mischievous", "secret"],
+    "keywords": ["face", "happy", "mischievous", "secret", "smile", "sexy"],
     "char": "😉",
     "category": "smileys_&_people"
   },
   "blush": {
-    "keywords": ["face", "smile", "happy", "flushed", "crush", "embarrassed", "shy", "joy"],
+    "keywords": ["face", "smile", "happy", "flushed", "crush", "joy"],
     "char": "😊",
     "category": "smileys_&_people"
   },
   "relaxed": {
-    "keywords": ["face", "blush", "massage", "happiness"],
+    "keywords": ["face", "blush", "massage", "happiness", "happy", "embarrassed", "shy", "crush", "love"],
     "char": "☺️",
     "category": "smileys_&_people"
   },
   "yum": {
-    "keywords": ["happy", "joy", "tongue", "smile", "face", "silly", "yummy"],
+    "keywords": ["happy", "joy", "tongue", "smile", "face", "silly", "yummy", "tasty"],
     "char": "😋",
     "category": "smileys_&_people"
   },
   "relieved": {
-    "keywords": ["face", "relaxed", "phew", "massage", "happiness"],
+    "keywords": ["face", "relaxed", "phew", "massage", "happiness", "smile", "sigh"],
     "char": "😌",
     "category": "smileys_&_people"
   },
   "heart_eyes": {
-    "keywords": ["face", "love", "like", "affection", "valentines", "infatuation", "crush"],
+    "keywords": ["face", "love", "like", "affection", "valentines", "infatuation", "crush", "hearts"],
     "char": "😍",
     "category": "smileys_&_people"
   },
   "sunglasses": {
-    "keywords": ["face", "cool", "smile", "summer", "beach"],
+    "keywords": ["face", "cool", "smile", "summer", "beach", "confident"],
     "char": "😎",
     "category": "smileys_&_people"
   },
   "smirk": {
-    "keywords": ["face", "smile", "mean", "prank", "smug", "sarcasm"],
+    "keywords": ["face", "smile", "mean", "prank", "smug", "sarcasm", "seductive"],
     "char": "😏",
     "category": "smileys_&_people"
   },
   "neutral_face": {
-    "keywords": ["indifference", "meh"],
+    "keywords": ["indifference", "meh", "straight face", "poker face", "indifferent"],
     "char": "😐",
     "category": "smileys_&_people"
   },
   "expressionless": {
-    "keywords": ["face", "indifferent", "-_-", "meh"],
+    "keywords": ["face", "indifferent", "-_-", "meh", "indifference", "straight face"],
     "char": "😑",
     "category": "smileys_&_people"
   },
   "unamused": {
-    "keywords": ["indifference", "bored", "straight face", "serious"],
+    "keywords": ["indifference", "bored", "straight face", "serious", "fury", "really?", "indifferent", "unhappy", "mad"],
     "char": "😒",
     "category": "smileys_&_people"
   },
   "sweat": {
-    "keywords": ["face", "hot", "sad", "tired", "exercise"],
+    "keywords": ["face", "hot", "sad", "tired", "exercise", "phew", "forehead"],
     "char": "😓",
     "category": "smileys_&_people"
   },
   "pensive": {
-    "keywords": ["face", "sad", "depressed", "okay", "upset"],
+    "keywords": ["face", "sad", "depressed", "okay", "upset", "down"],
     "char": "😔",
     "category": "smileys_&_people"
   },
   "confused": {
-    "keywords": ["face", "indifference", "huh", "weird", "hmmm"],
+    "keywords": ["face", "indifference", "huh", "weird", "hmmm", "ummm", "really?", "disappointed"],
     "char": "😕",
     "category": "smileys_&_people"
   },
@@ -125,22 +125,22 @@
     "category": "smileys_&_people"
   },
   "kissing": {
-    "keywords": ["love", "like", "face", "3", "valentines", "infatuation"],
+    "keywords": ["love", "like", "face", "valentines", "infatuation", "kiss", "smile", "open eyes", "happy"],
     "char": "😗",
     "category": "smileys_&_people"
   },
   "kissing_heart": {
-    "keywords": ["face", "love", "like", "affection", "valentines", "infatuation"],
+    "keywords": ["face", "love", "like", "affection", "valentines", "infatuation", "kiss", "hearts", "wink", "smile", "happy"],
     "char": "😘",
     "category": "smileys_&_people"
   },
   "kissing_smiling_eyes": {
-    "keywords": ["face", "affection", "valentines", "infatuation"],
+    "keywords": ["face", "affection", "valentines", "infatuation", "closed eyes", "happy"],
     "char": "😙",
     "category": "smileys_&_people"
   },
   "kissing_closed_eyes": {
-    "keywords": ["face", "love", "like", "affection", "valentines", "infatuation"],
+    "keywords": ["face", "love", "like", "affection", "valentines", "infatuation", "smile", "happy"],
     "char": "😚",
     "category": "smileys_&_people"
   },
@@ -150,12 +150,12 @@
     "category": "smileys_&_people"
   },
   "stuck_out_tongue_winking_eye": {
-    "keywords": ["face", "prank", "childish", "playful", "mischievous", "smile"],
+    "keywords": ["face", "prank", "childish", "playful", "mischievous", "smile", "wink", "haha", "laugh", "lol", "kidding"],
     "char": "😜",
     "category": "smileys_&_people"
   },
   "stuck_out_tongue_closed_eyes": {
-    "keywords": ["face", "prank", "playful", "mischievous", "smile"],
+    "keywords": ["face", "prank", "playful", "mischievous", "smile", "haha", "laugh", "lol"],
     "char": "😝",
     "category": "smileys_&_people"
   },
@@ -165,72 +165,72 @@
     "category": "smileys_&_people"
   },
   "worried": {
-    "keywords": ["face", "concern", "nervous"],
+    "keywords": ["face", "concern", "nervous", "gasp", "confused", "ummm"],
     "char": "😟",
     "category": "smileys_&_people"
   },
   "angry": {
-    "keywords": ["mad", "face", "annoyed", "frustrated"],
+    "keywords": ["mad", "face", "annoyed", "frustrated", "fury", "pissed", "peeved", "rage"],
     "char": "😠",
     "category": "smileys_&_people"
   },
   "rage": {
-    "keywords": ["angry", "mad", "hate", "despise"],
+    "keywords": ["angry", "mad", "hate", "despise", "red", "frustrated", "peeved", "pissed"],
     "char": "😡",
     "category": "smileys_&_people"
   },
   "cry": {
-    "keywords": ["face", "tears", "sad", "depressed", "upset"],
+    "keywords": ["face", "tears", "sad", "depressed", "upset", "frown"],
     "char": "😢",
     "category": "smileys_&_people"
   },
   "persevere": {
-    "keywords": ["face", "sick", "no", "upset", "oops"],
+    "keywords": ["face", "sick", "no", "upset", "oops", "messed up"],
     "char": "😣",
     "category": "smileys_&_people"
   },
   "triumph": {
-    "keywords": ["face", "gas", "phew", "proud", "pride"],
+    "keywords": ["face", "gas", "phew", "proud", "pride", "mad", "steam", "angry", "fury"],
     "char": "😤",
     "category": "smileys_&_people"
   },
   "disappointed_relieved": {
-    "keywords": ["face", "phew", "sweat", "nervous"],
+    "keywords": ["face", "phew", "sweat", "nervous", "sad", "miss", "close"],
     "char": "😥",
     "category": "smileys_&_people"
   },
   "frowning": {
-    "keywords": ["face", "aw", "what"],
+    "keywords": ["face", "awww", "what", "gasp", "uhhh", "ummm", "confused"],
     "char": "😦",
     "category": "smileys_&_people"
   },
   "anguished": {
-    "keywords": ["face", "stunned", "nervous"],
+    "keywords": ["face", "stunned", "nervous", "gasp", "uhhh", "ummm", "what", "scared", "fearful", "confused"],
     "char": "😧",
     "category": "smileys_&_people"
   },
   "fearful": {
-    "keywords": ["face", "scared", "terrified", "nervous", "oops", "huh"],
+    "keywords": ["face", "scared", "terrified", "nervous", "oops", "huh", "blue", "confused"],
     "char": "😨",
     "category": "smileys_&_people"
   },
   "weary": {
-    "keywords": ["face", "tired", "sleepy", "sad", "frustrated", "upset"],
+    "keywords": ["face", "tired", "sleepy", "sad", "frustrated", "upset", "crying", "complaining", "hurting"],
     "char": "😩",
     "category": "smileys_&_people"
   },
   "sleepy": {
-    "keywords": ["face", "tired", "rest", "nap"],
+    "keywords": ["face", "tired", "rest", "nap", "tear"],
     "char": "😪",
     "category": "smileys_&_people"
   },
   "tired_face": {
-    "keywords": ["sick", "whine", "upset", "frustrated"],
+    "keywords": ["sick", "whine", "upset", "frustrated", "crying"],
     "char": "😫",
     "category": "smileys_&_people"
   },
   "grimacing": {
-    "keywords": ["face", "grimace", "teeth"],
+    "keywords": ["face", "grimace", "teeth", "crunchy"],
     "char": "😬",
     "category": "smileys_&_people"
   },

@@ -123,6 +123,12 @@ class EmojiParser {
     for item in emojiObjects {
       let emoji = item as! Emoji
       let tempDictionary = NSMutableDictionary()
+      
+      // Sort the emoji objects by name
+      emoji.keywords.sortUsingComparator({ (firstObject: AnyObject, secondObject: AnyObject) -> NSComparisonResult in
+        (firstObject as! String).compare((secondObject as! String))
+      })
+      
       tempDictionary.setObject(emoji.keywords, forKey: "keywords")
       tempDictionary.setObject(emoji.symbol, forKey: "char")
       tempDictionary.setObject(emoji.catagory.stringByReplacingOccurrencesOfString(" ", withString: "_"), forKey: "category")
