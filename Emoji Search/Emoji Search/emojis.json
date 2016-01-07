@@ -240,32 +240,32 @@
     "category": "smileys_&_people"
   },
   "open_mouth": {
-    "keywords": ["face", "surprise", "impressed", "wow"],
+    "keywords": ["face", "surprise", "impressed", "wow", "woah"],
     "char": "😮",
     "category": "smileys_&_people"
   },
   "hushed": {
-    "keywords": ["face", "woo", "shh"],
+    "keywords": ["face", "woo", "shh", "surprise"],
     "char": "😯",
     "category": "smileys_&_people"
   },
   "cold_sweat": {
-    "keywords": ["face", "nervous"],
+    "keywords": ["face", "nervous", "tear", "blue"],
     "char": "😰",
     "category": "smileys_&_people"
   },
   "scream": {
-    "keywords": ["face", "munch", "scared", "omg"],
+    "keywords": ["face", "munch", "scared", "omg", "what", "blue", "surprise", "scream"],
     "char": "😱",
     "category": "smileys_&_people"
   },
   "astonished": {
-    "keywords": ["face", "xox", "surprised", "poisoned"],
+    "keywords": ["face", "xox", "surprised", "poisoned", "dead"],
     "char": "😲",
     "category": "smileys_&_people"
   },
   "flushed": {
-    "keywords": ["face", "blush", "shy", "flattered"],
+    "keywords": ["face", "blush", "shy", "flattered", "surprise", "bigeyes"]
     "char": "😳",
     "category": "smileys_&_people"
   },
@@ -275,22 +275,22 @@
     "category": "smileys_&_people"
   },
   "dizzy_face": {
-    "keywords": ["spent", "unconscious", "xox"],
+    "keywords": ["spent", "unconscious", "xox", "dead", "poisoned"],
     "char": "😵",
     "category": "smileys_&_people"
   },
   "no_mouth": {
-    "keywords": ["face", "hellokitty"],
+    "keywords": ["face", "hellokitty", "nomouth", "eyes"],
     "char": "😶",
     "category": "smileys_&_people"
   },
   "mask": {
-    "keywords": ["face", "sick", "ill", "disease"],
+    "keywords": ["face", "sick", "ill", "disease", "mask"],
     "char": "😷",
     "category": "smileys_&_people"
   },
   "smile_cat": {
-    "keywords": ["animal", "cats"],
+    "keywords": ["animal", "cats", "smiling"],
     "char": "😸",
     "category": "smileys_&_people"
   },
@@ -300,27 +300,27 @@
     "category": "smileys_&_people"
   },
   "smiley_cat": {
-    "keywords": ["animal", "cats", "happy"],
+    "keywords": ["animal", "cats", "happy", "smiling"],
     "char": "😺",
     "category": "smileys_&_people"
   },
   "heart_eyes_cat": {
-    "keywords": ["animal", "love", "like", "affection", "cats", "valentines"],
+    "keywords": ["animal", "love", "like", "affection", "cats", "valentines", "heart"],
     "char": "😻",
     "category": "smileys_&_people"
   },
   "smirk_cat": {
-    "keywords": ["animal", "cats"],
+    "keywords": ["animal", "cats", "smirk"],
     "char": "😼",
     "category": "smileys_&_people"
   },
   "kissing_cat": {
-    "keywords": ["animal", "cats"],
+    "keywords": ["animal", "cats", "blush", "kiss"],
     "char": "😽",
     "category": "smileys_&_people"
   },
   "pouting_cat": {
-    "keywords": ["animal", "cats"],
+    "keywords": ["animal", "cats", "glare", "mean", "angry"],
     "char": "😾",
     "category": "smileys_&_people"
   },
@@ -330,27 +330,27 @@
     "category": "smileys_&_people"
   },
   "scream_cat": {
-    "keywords": ["animal", "cats", "munch", "scared"],
+    "keywords": ["animal", "cats", "munch", "scared", "surprise"],
     "char": "🙀",
     "category": "smileys_&_people"
   },
   "footprints": {
-    "keywords": ["feet", "tracking", "walking", "beach"],
+    "keywords": ["feet", "tracking", "walking", "beach", "footprints"],
     "char": "👣",
     "category": "smileys_&_people"
   },
   "bust_in_silhouette": {
-    "keywords": ["user", "person", "human"],
+    "keywords": ["user", "person", "human", "silhouette"],
     "char": "👤",
     "category": "smileys_&_people"
   },
   "busts_in_silhouette": {
-    "keywords": ["user", "person", "human", "group", "team"],
+    "keywords": ["user", "person", "human", "group", "team", "silhouette"],
     "char": "👥",
     "category": "smileys_&_people"
   },
   "baby": {
-    "keywords": ["child", "boy", "girl", "toddler"],
+    "keywords": ["child", "boy", "girl", "toddler", "baby"],
     "char": "👶",
     "category": "smileys_&_people"
   },
@@ -360,12 +360,12 @@
     "category": "smileys_&_people"
   },
   "girl": {
-    "keywords": ["female", "woman", "teenager"],
+    "keywords": ["female", "woman", "teenager", "girl"],
     "char": "👧",
     "category": "smileys_&_people"
   },
   "man": {
-    "keywords": ["mustache", "father", "dad", "guy", "classy", "sir", "moustache"],
+    "keywords": ["mustache", "father", "dad", "guy", "classy", "sir", "moustache", "male"],
     "char": "👨",
     "category": "smileys_&_people"
   },
@@ -395,12 +395,12 @@
     "category": "smileys_&_people"
   },
   "dancers": {
-    "keywords": ["female", "bunny", "women", "girls"],
+    "keywords": ["female", "bunny", "women", "girls", "dancing"],
     "char": "👯",
     "category": "smileys_&_people"
   },
   "bride_with_veil": {
-    "keywords": ["couple", "marriage", "wedding"],
+    "keywords": ["couple", "marriage", "wedding", "bride"],
     "char": "👰",
     "category": "smileys_&_people"
   },
@@ -410,22 +410,22 @@
     "category": "smileys_&_people"
   },
   "man_with_gua_pi_mao": {
-    "keywords": ["male", "boy"],
+    "keywords": ["male", "boy", "hat", "cap"],
     "char": "👲",
     "category": "smileys_&_people"
   },
   "man_with_turban": {
-    "keywords": ["male", "indian", "hinduism", "arabs"],
+    "keywords": ["male", "indian", "hinduism", "arabs", "hat", "cap"],
     "char": "👳",
     "category": "smileys_&_people"
   },
   "older_man": {
-    "keywords": ["human", "male", "men"],
+    "keywords": ["human", "male", "men", "old"],
     "char": "👴",
     "category": "smileys_&_people"
   },
   "older_woman": {
-    "keywords": ["female", "women", "girl", "lady"],
+    "keywords": ["female", "women", "girl", "lady", "old"],
     "char": "👵",
     "category": "smileys_&_people"
   },
@@ -440,12 +440,12 @@
     "category": "smileys_&_people"
   },
   "princess": {
-    "keywords": ["girl", "woman", "female", "blond", "crown", "royal", "queen"],
+    "keywords": ["girl", "woman", "female", "blond", "crown", "royal", "queen", "princess"],
     "char": "👸",
     "category": "smileys_&_people"
   },
   "guardsman": {
-    "keywords": ["uk", "gb", "british", "male", "guy", "royal"],
+    "keywords": ["uk", "gb", "british", "male", "guy", "royal", "hat"],
     "char": "💂",
     "category": "smileys_&_people"
   },
@@ -460,7 +460,7 @@
     "category": "smileys_&_people"
   },
   "ghost": {
-    "keywords": ["halloween", "spooky", "scary"],
+    "keywords": ["halloween", "spooky", "scary", "toungue"],
     "char": "👻",
     "category": "smileys_&_people"
   },
@@ -475,22 +475,22 @@
     "category": "smileys_&_people"
   },
   "smiling_poop": {
-    "keywords": ["poop", "shitface", "fail", "turd"],
+    "keywords": ["poop", "shitface", "fail", "turd", "crap"],
     "char": "💩",
     "category": "smileys_&_people"
   },
   "skull": {
-    "keywords": ["dead", "skeleton", "creepy"],
+    "keywords": ["dead", "skeleton", "creepy", "halloween"],
     "char": "💀",
     "category": "smileys_&_people"
   },
   "alien": {
-    "keywords": ["UFO", "paul", "weird", "outer_space"],
+    "keywords": ["UFO", "weird", "outer_space", "space"],
     "char": "👽",
     "category": "smileys_&_people"
   },
   "space_invader": {
-    "keywords": ["game", "arcade", "play"],
+    "keywords": ["game", "arcade", "play", "alien"],
     "char": "👾",
     "category": "smileys_&_people"
   },
@@ -500,22 +500,22 @@
     "category": "smileys_&_people"
   },
   "information_desk_person": {
-    "keywords": ["female", "girl", "woman", "human"],
+    "keywords": ["female", "girl", "woman", "human", "sassy", "whatever", "hand"],
     "char": "💁",
     "category": "smileys_&_people"
   },
   "no_good": {
-    "keywords": ["female", "girl", "woman", "nope"],
+    "keywords": ["female", "girl", "woman", "nope", "hands"],
     "char": "🙅",
     "category": "smileys_&_people"
   },
   "ok_woman": {
-    "keywords": ["women", "girl", "female", "pink", "human"],
+    "keywords": ["women", "girl", "female", "pink", "human", "idk"],
     "char": "🙆",
     "category": "smileys_&_people"
   },
   "raising_hand": {
-    "keywords": ["female", "girl", "woman"],
+    "keywords": ["female", "girl", "woman", "hand"],
     "char": "🙋",
     "category": "smileys_&_people"
   },
@@ -530,12 +530,12 @@
     "category": "smileys_&_people"
   },
   "massage": {
-    "keywords": ["female", "girl", "woman", "head"],
+    "keywords": ["female", "girl", "woman", "head", "scalp"],
     "char": "💆",
     "category": "smileys_&_people"
   },
   "haircut": {
-    "keywords": ["female", "girl", "woman"],
+    "keywords": ["female", "girl", "woman", "scissors"],
     "char": "💇",
     "category": "smileys_&_people"
   },
@@ -550,7 +550,7 @@
     "category": "smileys_&_people"
   },
   "raised_hands": {
-    "keywords": ["gesture", "hooray", "yea", "celebration"],
+    "keywords": ["gesture", "hooray", "yea", "celebration", "highfive"],
     "char": "🙌",
     "category": "smileys_&_people"
   },
@@ -570,12 +570,12 @@
     "category": "smileys_&_people"
   },
   "nose": {
-    "keywords": ["smell", "sniff"],
+    "keywords": ["smell", "sniff", "scent", "odor"],
     "char": "👃",
     "category": "smileys_&_people"
   },
   "lips": {
-    "keywords": ["mouth", "kiss"],
+    "keywords": ["mouth", "kiss", "rockyhorror"],
     "char": "👄",
     "category": "smileys_&_people"
   },
@@ -585,7 +585,7 @@
     "category": "smileys_&_people"
   },
   "tongue": {
-    "keywords": ["mouth", "playful"],
+    "keywords": ["mouth", "playful", "lick", "yum"],
     "char": "👅",
     "category": "smileys_&_people"
   },
@@ -600,12 +600,12 @@
     "category": "smileys_&_people"
   },
   "+1": {
-    "keywords": ["thumbsup", "yes", "awesome", "good", "agree", "accept", "cool", "hand", "like"],
+    "keywords": ["thumbsup", "yes", "awesome", "good", "agree", "accept", "cool", "hand", "like", "sure"],
     "char": "👍",
     "category": "smileys_&_people"
   },
   "-1": {
-    "keywords": ["thumbsdown", "no", "dislike", "hand"],
+    "keywords": ["thumbsdown", "no", "dislike", "hand", "nah", "disagree", "deny"],
     "char": "👎",
     "category": "smileys_&_people"
   },
@@ -615,27 +615,27 @@
     "category": "smileys_&_people"
   },
   "point_up_2": {
-    "keywords": ["fingers", "hand", "direction"],
+    "keywords": ["fingers", "hand", "direction", "north"],
     "char": "👆",
     "category": "smileys_&_people"
   },
   "point_down": {
-    "keywords": ["fingers", "hand", "direction"],
+    "keywords": ["fingers", "hand", "direction", "south"],
     "char": "👇",
     "category": "smileys_&_people"
   },
   "point_left": {
-    "keywords": ["direction", "fingers", "hand"],
+    "keywords": ["direction", "fingers", "hand", "west"],
     "char": "👈",
     "category": "smileys_&_people"
   },
   "point_right": {
-    "keywords": ["fingers", "hand", "direction"],
+    "keywords": ["fingers", "hand", "direction", "east"],
     "char": "👉",
     "category": "smileys_&_people"
   },
   "ok_hand": {
-    "keywords": ["fingers", "limbs", "perfect"],
+    "keywords": ["fingers", "limbs", "perfect", "sure"],
     "char": "👌",
     "category": "smileys_&_people"
   },
@@ -645,12 +645,12 @@
     "category": "smileys_&_people"
   },
   "facepunch": {
-    "keywords": ["angry", "violence", "fist", "hit", "attack", "hand"],
+    "keywords": ["angry", "violence", "fist", "hit", "attack", "hand", "yeah"],
     "char": "👊",
     "category": "smileys_&_people"
   },
   "fist": {
-    "keywords": ["fingers", "hand", "grasp"],
+    "keywords": ["fingers", "hand", "grasp", "solid"],
     "char": "✊",
     "category": "smileys_&_people"
   },
@@ -660,7 +660,7 @@
     "category": "smileys_&_people"
   },
   "muscle": {
-    "keywords": ["arm", "flex", "hand", "summer", "strong"],
+    "keywords": ["arm", "flex", "hand", "summer", "strong", "muscles"],
     "char": "💪",
     "category": "smileys_&_people"
   },
@@ -670,7 +670,7 @@
     "category": "smileys_&_people"
   },
   "pray": {
-    "keywords": ["please", "hope", "wish", "namaste", "highfive"],
+    "keywords": ["please", "hope", "wish", "namaste", "highfive", "amen"],
     "char": "🙏",
     "category": "smileys_&_people"
   },
@@ -680,27 +680,27 @@
     "category": "smileys_&_people"
   },
   "hugging": {
-    "keywords": ["face", "smile", "hugging"],
+    "keywords": ["face", "smile", "hugging", "blush"],
     "char": "🤗",
     "category": "smileys_&_people"
   },
   "thinking": {
-    "keywords": ["face"],
+    "keywords": ["face", "hmmmmm"],
     "char": "🤔",
     "category": "smileys_&_people"
   },
   "rolling_eyes": {
-    "keywords": ["face", "eyeroll", "frustrated"],
+    "keywords": ["face", "eyeroll", "frustrated", "sarcasm"],
     "char": "🙄",
     "category": "smileys_&_people"
   },
   "zipper_mouth": {
-    "keywords": ["face", "sealed"],
+    "keywords": ["face", "sealed", "quiet", "shutup"],
     "char": "🤐",
     "category": "smileys_&_people"
   },
   "nerd": {
-    "keywords": ["face", "nerdy", "geek", "dork"],
+    "keywords": ["face", "nerdy", "geek", "dork", "glasses"],
     "char": "🤓",
     "category": "smileys_&_people"
   },
@@ -720,22 +720,22 @@
     "category": "smileys_&_people"
   },
   "thermometer_face": {
-    "keywords": ["sick", "temperature"],
+    "keywords": ["sick", "temperature", "fever", "cold"],
     "char": "🤒",
     "category": "smileys_&_people"
   },
   "bandage_face": {
-    "keywords": ["injured", "clumsy"],
+    "keywords": ["injured", "clumsy", "sick", "hurt"],
     "char": "🤕",
     "category": "smileys_&_people"
   },
   "money_mouth": {
-    "keywords": ["face", "rich", "dollar"],
+    "keywords": ["face", "rich", "dollar", "payday"],
     "char": "🤑",
     "category": "smileys_&_people"
   },
   "speaking_head": {
-    "keywords": ["user", "person", "human"],
+    "keywords": ["user", "person", "human", "silhouette"],
     "char": "🗣",
     "category": "smileys_&_people"
   },
@@ -745,12 +745,12 @@
     "category": "smileys_&_people"
   },
   "helmet": {
-    "keywords": ["construction", "build"],
+    "keywords": ["construction", "build", "hat"],
     "char": "⛑",
     "category": "smileys_&_people"
   },
   "sleuth": {
-    "keywords": ["human", "spy", "detective"],
+    "keywords": ["human", "spy", "detective", "hat"],
     "char": "🕵",
     "category": "smileys_&_people"
   },
@@ -765,18 +765,18 @@
     "category": "smileys_&_people"
   },
   "sign_of_horns": {
-    "keywords": ["hand", "fingers", "evil_eye", "metal", "rock_on"],
+    "keywords": ["hand", "fingers", "evil_eye", "metal", "rock_on", "music"],
     "char": "🤘",
     "category": "smileys_&_people"
   },
   "splayed_fingers": {
-    "keywords": ["raised_hand"],
+    "keywords": ["raised_hand", "highfive"],
     "char": "🖐",
     "category": "smileys_&_people"
   },
   "writing_hand": {
-    "keywords": ["pen"],
-    "char": "✍",
+    "keywords": ["pen", "letter", "note"],
+    "char": "✍️",
     "category": "smileys_&_people"
   },
   "seedling": {
@@ -785,12 +785,12 @@
     "category": "animals_&_nature"
   },
   "evergreen_tree": {
-    "keywords": ["plant", "nature"],
+    "keywords": ["plant", "nature", "christmas"],
     "char": "🌲",
     "category": "animals_&_nature"
   },
   "deciduous_tree": {
-    "keywords": ["plant", "nature"],
+    "keywords": ["plant", "nature", "oak"],
     "char": "🌳",
     "category": "animals_&_nature"
   },
